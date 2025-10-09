@@ -1,5 +1,3 @@
-import React from "react";
-
 interface StatCardData {
   number: string;
   description: string;
@@ -39,11 +37,15 @@ export const VideoSection = (): JSX.Element => {
         </header>
 
         <div className="w-full mb-8 lg:mb-12 xl:mb-16">
-          <img
+          <video
             className="w-full h-auto rounded-2xl object-cover"
-            alt="Luxury property video showcase"
-            src="https://c.animaapp.com/3DzYceDx/img/video.png"
-          />
+            controls
+            preload="metadata"
+            poster="https://c.animaapp.com/3DzYceDx/img/video.png"
+          >
+            <source src="/modern-house-interior-2025-08-29-11-05-37-utc_1760044539731.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 xl:gap-12">
