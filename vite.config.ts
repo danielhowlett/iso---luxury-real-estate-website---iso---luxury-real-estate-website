@@ -8,6 +8,16 @@ export default defineConfig(({ mode }) => ({
   plugins: [react(), mode === "development" && screenGraphPlugin()],
   publicDir: "./static",
   base: "./",
+  server: {
+    host: "0.0.0.0",
+    port: 5000,
+    strictPort: true,
+  },
+  preview: {
+    host: "0.0.0.0",
+    port: 5000,
+    strictPort: true,
+  },
   css: {
     postcss: {
       plugins: [tailwind()],
