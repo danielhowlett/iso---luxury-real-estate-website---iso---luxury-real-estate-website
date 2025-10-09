@@ -11,7 +11,7 @@ import { VideoSection } from "./sections/VideoSection";
 export const IsoLuxuryReal = (): JSX.Element => {
   return (
     <main
-      className="bg-[#090909] overflow-hidden w-full min-w-[1920px] min-h-[6865px] relative"
+      className="bg-[#090909] overflow-x-hidden w-full min-h-screen relative"
       data-model-id="1:2"
     >
       <HeroSection />

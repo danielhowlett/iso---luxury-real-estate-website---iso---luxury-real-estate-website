@@ -50,59 +50,48 @@ export const TestimonialsSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="absolute top-[2641px] left-[calc(50.00%_-_760px)] w-[1522px] h-[1037px] flex flex-col gap-[98px]">
-      <h2 className="-ml-0.5 h-60 w-[740px] self-center [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-white text-[80px] text-center tracking-[0] leading-[120px]">
-        What Our Clients Are Saying
-      </h2>
+    <section className="relative w-full py-12 lg:py-20 xl:py-24">
+      <div className="w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="font-medium text-white text-4xl sm:text-5xl lg:text-6xl xl:text-[80px] text-center leading-tight lg:leading-[1.5] mb-12 lg:mb-16 xl:mb-20 [font-family:'Plus_Jakarta_Sans',Helvetica]">
+          What Our Clients Are Saying
+        </h2>
 
-      <div className="w-[1520px] h-[699px] relative">
-        {testimonials.map((testimonial, index) => {
-          const isLeftColumn = index % 2 === 0;
-          const isTopRow = index < 2;
-          const leftPosition = isLeftColumn ? "0" : "791px";
-          const topPosition = isTopRow ? "0" : "394px";
-          const imageTopOffset = index === 0 ? "45px" : "53px";
-
-          return (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12">
+          {testimonials.map((testimonial) => (
             <article
               key={testimonial.id}
-              className="absolute w-[735px] h-[305px]"
-              style={{ top: topPosition, left: leftPosition }}
+              className="relative bg-[#ffffff0f] rounded-[30px] border border-solid border-[#ffffff30] backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)] p-6 lg:p-8 flex flex-col sm:flex-row gap-6"
             >
-              <div className="top-0 left-[108px] w-[621px] h-[305px] bg-[#ffffff0f] rounded-[30px] border-[#ffffff30] backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)] absolute border border-solid" />
-
-              <div
-                className="absolute top-[69px] left-[606px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-white text-9xl tracking-[0] leading-[30px] whitespace-nowrap"
-                aria-hidden="true"
-              >
-                &quot;
-              </div>
-
-              <blockquote className="absolute top-[148px] left-[261px] w-[409px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffa1] text-base tracking-[0] leading-[30px]">
-                {testimonial.quote}
-              </blockquote>
-
-              <p className="absolute top-16 left-[261px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-transparent text-2xl tracking-[0] leading-6">
-                <span className="text-white leading-[34px]">
-                  {testimonial.name}
-                </span>
-                <span className="text-white text-xl leading-[34px]">
-                  &nbsp;
-                </span>
-                <span className="text-[#ffffffa1] text-base leading-[30px]">
-                  / {testimonial.location}
-                </span>
-              </p>
-
               <img
-                className="absolute left-0 w-[204px] h-[220px] object-cover"
-                style={{ top: imageTopOffset }}
+                className="w-full sm:w-32 lg:w-40 xl:w-48 h-48 sm:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl flex-shrink-0"
                 alt={testimonial.imageAlt}
                 src={testimonial.image}
               />
+
+              <div className="flex flex-col gap-4 flex-1">
+                <div className="flex items-start justify-between">
+                  <p className="font-medium text-transparent text-lg lg:text-xl xl:text-2xl [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                    <span className="text-white">{testimonial.name}</span>
+                    <span className="text-[#ffffffa1] text-sm lg:text-base">
+                      {" "}
+                      / {testimonial.location}
+                    </span>
+                  </p>
+                  <div
+                    className="font-medium text-white text-5xl lg:text-6xl xl:text-7xl [font-family:'Plus_Jakarta_Sans',Helvetica] leading-none"
+                    aria-hidden="true"
+                  >
+                    &quot;
+                  </div>
+                </div>
+
+                <blockquote className="font-medium text-[#ffffffa1] text-sm lg:text-base leading-relaxed lg:leading-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                  {testimonial.quote}
+                </blockquote>
+              </div>
             </article>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </section>
   );

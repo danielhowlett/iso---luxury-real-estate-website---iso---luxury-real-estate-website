@@ -20,52 +20,57 @@ export const VideoSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="absolute w-[1521px] h-[1076px] top-[4641px] left-[200px]">
-      <header className="absolute top-0 left-[calc(50.00%_-_760px)] w-[1427px] h-60">
-        <p className="absolute top-[131px] left-[calc(50.00%_+_266px)] w-[443px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffcc] text-base tracking-[0] leading-[30px]">
-          At Iso, we believe that a home is more than a structure — it&#39;s a
-          statement. Our portfolio is a celebration of refined architecture and
-          serene landscapes
-        </p>
-
-        <h2 className="absolute top-0 left-0 w-[804px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-white text-[80px] tracking-[0] leading-[120px]">
-          Luxury Properties for Visionary Living
-        </h2>
-      </header>
-
-      <div className="absolute top-[382px] left-px w-[1520px] h-[576px]">
-        <img
-          className="w-full h-full object-cover"
-          alt="Luxury property video showcase"
-          src="https://c.animaapp.com/3DzYceDx/img/video.png"
-        />
-      </div>
-
-      {statCards.map((card, index) => (
-        <article
-          key={index}
-          className="absolute top-[872px] w-[464px] h-[204px]"
-          style={{ left: index === 0 ? "419px" : "961px" }}
-        >
-          <div className="top-0 left-0 w-[458px] h-[204px] bg-[#ffffff0f] rounded-[30px] border-[#ffffff30] backdrop-blur-[33.95px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(33.95px)_brightness(100%)] absolute border border-solid" />
-
-          <p className="absolute top-[29px] left-[calc(50.00%_-_54px)] w-[242px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffcc] text-base tracking-[0] leading-[30px]">
-            {card.description}
-          </p>
-
-          <a
-            href="#"
-            className="absolute top-[146px] left-[calc(50.00%_-_54px)] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-white text-base tracking-[0] leading-[30px] whitespace-nowrap hover:underline focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent"
-            aria-label={`Learn more about ${card.number} statistic`}
-          >
-            Learn More
-          </a>
-
-          <div className="absolute top-[42px] left-[calc(50.00%_-_188px)] [font-family:'Plus_Jakarta_Sans',Helvetica] font-normal text-white text-5xl tracking-[0] leading-[30px] whitespace-nowrap">
-            {card.number}
+    <section className="relative w-full py-12 lg:py-20 xl:py-24">
+      <div className="w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 mb-12 lg:mb-16">
+          <div className="flex-1">
+            <h2 className="font-medium text-white text-4xl sm:text-5xl lg:text-6xl xl:text-[80px] leading-tight lg:leading-[1.5] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+              Luxury Properties for Visionary Living
+            </h2>
           </div>
-        </article>
-      ))}
+
+          <div className="flex-1 flex items-end">
+            <p className="font-medium text-[#ffffffcc] text-sm lg:text-base leading-relaxed lg:leading-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+              At Iso, we believe that a home is more than a structure — it&#39;s a
+              statement. Our portfolio is a celebration of refined architecture and
+              serene landscapes
+            </p>
+          </div>
+        </header>
+
+        <div className="w-full mb-8 lg:mb-12 xl:mb-16">
+          <img
+            className="w-full h-auto rounded-2xl object-cover"
+            alt="Luxury property video showcase"
+            src="https://c.animaapp.com/3DzYceDx/img/video.png"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 xl:gap-12">
+          {statCards.map((card, index) => (
+            <article
+              key={index}
+              className="bg-[#ffffff0f] rounded-[30px] border border-solid border-[#ffffff30] backdrop-blur-[33.95px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(33.95px)_brightness(100%)] p-6 lg:p-8 flex flex-col gap-4 lg:gap-6"
+            >
+              <div className="font-normal text-white text-4xl lg:text-5xl [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                {card.number}
+              </div>
+
+              <p className="font-medium text-[#ffffffcc] text-sm lg:text-base leading-relaxed lg:leading-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                {card.description}
+              </p>
+
+              <a
+                href="#"
+                className="font-medium text-white text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] hover:underline focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent w-fit"
+                aria-label={`Learn more about ${card.number} statistic`}
+              >
+                Learn More
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

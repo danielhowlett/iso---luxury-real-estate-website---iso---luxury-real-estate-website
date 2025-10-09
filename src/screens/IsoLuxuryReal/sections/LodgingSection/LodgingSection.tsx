@@ -41,49 +41,57 @@ const lodgingData: LodgingCardData[] = [
 
 export const LodgingSection = (): JSX.Element => {
   return (
-    <section className="absolute w-[1521px] h-[565px] top-[1011px] left-[199px] flex gap-[68px]">
-      {lodgingData.map((lodging) => (
-        <article key={lodging.id} className="w-[463px] h-[565px] relative">
-          <div className="absolute top-0 left-0 w-[459px] h-[561px] bg-[#ffffff0f] rounded-[30px] border border-solid border-[#ffffff30] backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)]" />
+    <section className="relative w-full py-12 lg:py-20 xl:py-24">
+      <div className="w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-12">
+          {lodgingData.map((lodging) => (
+            <article
+              key={lodging.id}
+              className="w-full bg-[#ffffff0f] rounded-[30px] border border-solid border-[#ffffff30] backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)] overflow-hidden"
+            >
+              <img
+                className="w-full h-48 lg:h-52 xl:h-[213px] object-cover"
+                alt={lodging.title}
+                src={lodging.image}
+              />
 
-          <img
-            className="absolute top-0 left-0 w-[459px] h-[213px] object-cover"
-            alt={lodging.title}
-            src={lodging.image}
-          />
+              <div className="p-6 lg:p-8 flex flex-col gap-4">
+                <h3 className="font-medium text-white text-xl lg:text-2xl xl:text-[28px] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                  {lodging.title}
+                </h3>
 
-          <p className="absolute top-80 left-[calc(50.00%_-_178px)] w-[352px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffa1] text-base tracking-[0] leading-[30px]">
-            {lodging.description}
-          </p>
+                <p className="font-medium text-[#ffffffa1] text-sm lg:text-base leading-relaxed [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                  {lodging.description}
+                </p>
 
-          <h3 className="absolute top-64 left-[calc(50.00%_-_178px)] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-white text-[28px] tracking-[0] leading-[30px] whitespace-nowrap">
-            {lodging.title}
-          </h3>
+                <div className="flex flex-wrap items-center gap-4 lg:gap-6 mt-2">
+                  <div className="flex items-center gap-2">
+                    <img
+                      className="w-5 h-5 lg:w-6 lg:h-6"
+                      alt="Location"
+                      src="https://c.animaapp.com/3DzYceDx/img/distance-2@2x.png"
+                    />
+                    <span className="font-medium text-[#ffffffa1] text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                      {lodging.location}
+                    </span>
+                  </div>
 
-          <div className="absolute top-[489px] left-[calc(50.00%_-_180px)] h-[30px] flex items-center gap-2">
-            <img
-              className="w-6 h-6 aspect-[1]"
-              alt="Location"
-              src="https://c.animaapp.com/3DzYceDx/img/distance-2@2x.png"
-            />
-            <span className="[font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffa1] text-base tracking-[0] leading-[30px] whitespace-nowrap">
-              {lodging.location}
-            </span>
-          </div>
-
-          <div className="absolute top-[489px] left-[calc(50.00%_+_42px)] w-[130px] h-[30px]">
-            <span className="absolute top-0 left-[calc(50.00%_-_30px)] text-[#ffffffa1] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-base tracking-[0] leading-[30px] whitespace-nowrap">
-              {lodging.bedrooms}
-            </span>
-
-            <img
-              className="absolute top-[3px] left-0 w-6 h-6 aspect-[1]"
-              alt="Bedrooms"
-              src="https://c.animaapp.com/3DzYceDx/img/bed-2@2x.png"
-            />
-          </div>
-        </article>
-      ))}
+                  <div className="flex items-center gap-2">
+                    <img
+                      className="w-5 h-5 lg:w-6 lg:h-6"
+                      alt="Bedrooms"
+                      src="https://c.animaapp.com/3DzYceDx/img/bed-2@2x.png"
+                    />
+                    <span className="font-medium text-[#ffffffa1] text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                      {lodging.bedrooms}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

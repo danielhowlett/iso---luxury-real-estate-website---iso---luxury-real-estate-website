@@ -52,140 +52,131 @@ const contactInfo: ContactInfo[] = [
 
 export const FooterSection = (): JSX.Element => {
   return (
-    <footer className="absolute top-[6343px] left-[-3px] w-[1920px] h-[448px] bg-transparent">
-      <img
-        className="absolute top-0 left-[3px] w-[1917px] h-px object-cover"
-        alt="Vector"
-        src="https://c.animaapp.com/3DzYceDx/img/vector-10.svg"
-      />
+    <footer className="relative w-full border-t border-[#ffffff30] py-12 lg:py-16 xl:py-20">
+      <div className="w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-8 lg:mb-12">
+          <div className="sm:col-span-2 lg:col-span-1 flex flex-col gap-6">
+            <div className="flex items-center gap-3.5">
+              <img
+                className="w-10 h-10 lg:w-[42.95px] lg:h-[42.95px]"
+                alt="Grain"
+                src="https://c.animaapp.com/3DzYceDx/img/grain@2x.png"
+              />
+              <div className="font-semibold text-white text-xl lg:text-2xl [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                ISO
+              </div>
+            </div>
 
-      <div className="absolute top-[123px] left-[201px] w-[311px] h-[309px] flex flex-col">
-        <div className="ml-[2.2px] w-[103.54px] flex gap-[14.6px]">
-          <img
-            className="w-[42.95px] h-[42.95px] aspect-[1]"
-            alt="Grain"
-            src="https://c.animaapp.com/3DzYceDx/img/grain@2x.png"
-          />
-
-          <div className="mt-[9.5px] w-11 h-6 [font-family:'Plus_Jakarta_Sans',Helvetica] font-semibold text-white text-2xl tracking-[0] leading-6 whitespace-nowrap">
-            ISO
+            <p className="font-medium text-[#ffffffcc] text-sm lg:text-base leading-relaxed lg:leading-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+              Iso is a modern real estate platform built for the discerning few.
+              Showcasing architecturally refined
+            </p>
           </div>
+
+          <nav
+            className="flex flex-col gap-4 lg:gap-6"
+            aria-label="Company"
+          >
+            <h3 className="font-medium text-white text-lg lg:text-xl [font-family:'Plus_Jakarta_Sans',Helvetica]">
+              Company
+            </h3>
+            <ul className="flex flex-col gap-3 lg:gap-4">
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="font-medium text-[#ffffffcc] text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] hover:text-white transition-colors"
+                  >
+                    {link.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav
+            className="flex flex-col gap-4 lg:gap-6"
+            aria-label="Properties"
+          >
+            <h3 className="font-medium text-white text-lg lg:text-xl [font-family:'Plus_Jakarta_Sans',Helvetica]">
+              Properties
+            </h3>
+            <ul className="flex flex-col gap-3 lg:gap-4">
+              {propertyLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="font-medium text-[#ffffffcc] text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] hover:text-white transition-colors"
+                  >
+                    {link.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav
+            className="flex flex-col gap-4 lg:gap-6"
+            aria-label="Services"
+          >
+            <h3 className="font-medium text-white text-lg lg:text-xl [font-family:'Plus_Jakarta_Sans',Helvetica]">
+              Services
+            </h3>
+            <ul className="flex flex-col gap-3 lg:gap-4">
+              {serviceLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="font-medium text-[#ffffffcc] text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] hover:text-white transition-colors"
+                  >
+                    {link.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <address className="flex flex-col gap-4 lg:gap-6 not-italic">
+            <h3 className="font-medium text-white text-lg lg:text-xl [font-family:'Plus_Jakarta_Sans',Helvetica]">
+              Get in Touch
+            </h3>
+
+            <div className="flex flex-col gap-4 lg:gap-6">
+              {contactInfo.map((info, index) => (
+                <div key={index} className="flex items-start gap-4">
+                  <img
+                    className="w-6 h-6 lg:w-8 lg:h-8 flex-shrink-0 mt-1"
+                    alt={info.alt}
+                    src={info.icon}
+                  />
+                  {index === 0 ? (
+                    <p className="font-medium text-[#ffffffcc] text-sm lg:text-base leading-relaxed lg:leading-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                      {info.text}
+                    </p>
+                  ) : (
+                    <a
+                      href={
+                        index === 1
+                          ? `mailto:${info.text}`
+                          : `tel:${info.text.replace(/\s/g, "")}`
+                      }
+                      className="font-medium text-[#ffffffcc] text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] hover:text-white transition-colors"
+                    >
+                      {info.text}
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          </address>
         </div>
 
-        <p className="w-[307.17px] h-[90px] mt-[33.1px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffcc] text-base tracking-[0] leading-[30px]">
-          Iso is a modern real estate platform built for the discerning few.
-          Showcasing architecturally refined
-        </p>
-
-        <p className="w-[241px] h-[30px] mt-[113px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffcc] text-base tracking-[0] leading-[30px] whitespace-nowrap">
-          Iso - Luxury Real Estate Website
-        </p>
-      </div>
-
-      <nav
-        className="left-[643px] w-[99px] h-[311px] gap-9 absolute top-[137px] flex flex-col"
-        aria-label="Company"
-      >
-        <h3 className="w-[95px] h-[15px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-white text-xl tracking-[0] leading-[30px] whitespace-nowrap">
-          Company
-        </h3>
-
-        <ul className="w-[74px] h-[260px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffcc] text-base tracking-[0] leading-[52px]">
-          {companyLinks.map((link, index) => (
-            <li key={index}>
-              <a href="#" className="hover:text-white transition-colors">
-                {link.text}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <nav
-        className="left-[882px] w-[154px] h-[259px] gap-9 absolute top-[137px] flex flex-col"
-        aria-label="Properties"
-      >
-        <h3 className="w-[101px] h-[15px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-white text-xl tracking-[0] leading-[30px] whitespace-nowrap">
-          Properties
-        </h3>
-
-        <ul className="w-[150px] h-52 [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffcc] text-base tracking-[0] leading-[52px]">
-          {propertyLinks.map((link, index) => (
-            <li key={index}>
-              <a href="#" className="hover:text-white transition-colors">
-                {link.text}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <nav
-        className="left-[1156px] w-[177px] h-[259px] gap-9 absolute top-[137px] flex flex-col"
-        aria-label="Services"
-      >
-        <h3 className="w-[83px] h-[15px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-white text-xl tracking-[0] leading-[30px] whitespace-nowrap">
-          Services
-        </h3>
-
-        <ul className="w-[173px] h-52 [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffcc] text-base tracking-[0] leading-[52px]">
-          {serviceLinks.map((link, index) => (
-            <li key={index}>
-              <a href="#" className="hover:text-white transition-colors">
-                {link.text}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <address className="left-[1422px] w-[300px] h-[254px] absolute top-[137px] flex flex-col not-italic">
-        <h3 className="w-[118px] h-[15px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-white text-xl tracking-[0] leading-[30px] whitespace-nowrap">
-          Get in Touch
-        </h3>
-
-        <div className="w-[300px] mt-[47.1px] flex gap-7">
-          <img
-            className="mt-[2.9px] w-8 h-8"
-            alt={contactInfo[0].alt}
-            src={contactInfo[0].icon}
-          />
-
-          <p className="w-[238px] h-[60px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffcc] text-base tracking-[0] leading-[30px]">
-            {contactInfo[0].text}
+        <div className="pt-6 lg:pt-8 border-t border-[#ffffff30]">
+          <p className="font-medium text-[#ffffffcc] text-sm lg:text-base text-center [font-family:'Plus_Jakarta_Sans',Helvetica]">
+            Iso - Luxury Real Estate Website
           </p>
         </div>
-
-        <div className="w-[243.33px] h-[33.33px] mt-[34.9px] flex gap-[24.3px]">
-          <img
-            className="w-8 h-8"
-            alt={contactInfo[1].alt}
-            src={contactInfo[1].icon}
-          />
-
-          <a
-            href="mailto:info@isorealestate.com"
-            className="mt-[3.3px] w-[185px] h-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffcc] text-base tracking-[0] leading-[30px] whitespace-nowrap hover:text-white transition-colors"
-          >
-            {contactInfo[1].text}
-          </a>
-        </div>
-
-        <div className="w-[202.33px] h-[33.33px] mt-[30.7px] flex gap-[25.3px]">
-          <img
-            className="w-8 h-8"
-            alt={contactInfo[2].alt}
-            src={contactInfo[2].icon}
-          />
-
-          <a
-            href="tel:+6281234567890"
-            className="mt-[3.3px] w-[143px] h-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffcc] text-base tracking-[0] leading-[30px] whitespace-nowrap hover:text-white transition-colors"
-          >
-            {contactInfo[2].text}
-          </a>
-        </div>
-      </address>
+      </div>
     </footer>
   );
 };

@@ -14,86 +14,91 @@ const navigationItems = [
 
 export const AboutUsSection = (): JSX.Element => {
   return (
-    <section className="absolute top-[1673px] left-[200px] w-[1520px] h-[777px]">
-      <header className="absolute top-0 left-[calc(50.00%_-_760px)] w-[1419px] h-60">
-        <p className="absolute top-[131px] left-[calc(50.00%_+_118px)] w-[587px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffcc] text-base tracking-[0] leading-[30px]">
-          Designed for those who demand more than just a place to live, Iso
-          presents a curated collection of luxury properties that reflect
-          sophistication, innovation, and timeless elegance.
-        </p>
-
-        <h2 className="absolute top-0 left-0 w-[744px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-white text-[80px] tracking-[0] leading-[120px]">
-          Crafted for the Modern Elite
-        </h2>
-      </header>
-
-      <img
-        className="absolute top-[347px] left-[606px] w-[914px] h-[430px] object-cover"
-        alt="Luxury property showcase"
-        src="https://c.animaapp.com/3DzYceDx/img/image-5.png"
-      />
-
-      <article className="absolute top-[347px] left-[calc(50.00%_-_760px)] w-[451px] h-[246px] flex flex-col">
-        <h3 className="ml-[-216px] h-[30px] w-[235px] self-center [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-white text-xl tracking-[0] leading-[30px] whitespace-nowrap">
-          DESIGN CONSULTATION
-        </h3>
-
-        <p className="-ml-1 h-[90px] w-[447px] self-center mt-[31px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-[#ffffffcc] text-base tracking-[0] leading-[30px]">
-          Designed for those who demand more than just a place to live, Iso
-          presents a curated collection of luxury properties that reflect
-          sophistication
-        </p>
-
-        <button
-          className="all-[unset] box-border w-[145px] h-[54px] relative mt-[41px] bg-[#ffffff0f] border-[#ffffff12] inline-flex items-center justify-center gap-2.5 px-[30px] py-3 rounded-[10px] border border-solid backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)]"
-          aria-label="Learn more about design consultation"
-        >
-          <span className="relative w-fit mt-[-1.00px] text-white text-center [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-base tracking-[0] leading-[30px] whitespace-nowrap">
-            Learn More
-          </span>
-        </button>
-      </article>
-
-      <nav
-        className="inline-flex items-center gap-[99px] absolute top-[737px] left-0"
-        aria-label="Property categories"
-      >
-        {tags.map((tag) => (
-          <div
-            key={tag.id}
-            className="inline-flex items-center justify-center gap-2.5 px-5 py-[5px] relative flex-[0_0_auto] rounded-[100px] border border-solid border-[#ffffff75]"
-          >
-            <span className="relative w-fit mt-[-1.00px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-white text-base tracking-[0] leading-[30px] whitespace-nowrap">
-              {tag.label}
-            </span>
+    <section className="relative w-full py-12 lg:py-20 xl:py-24">
+      <div className="w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 mb-12 lg:mb-16">
+          <div className="flex-1">
+            <h2 className="font-medium text-white text-4xl sm:text-5xl lg:text-6xl xl:text-[80px] leading-tight lg:leading-[1.5] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+              Crafted for the Modern Elite
+            </h2>
           </div>
-        ))}
-      </nav>
 
-      <nav
-        className="absolute top-[539px] left-72 w-[178px] h-[118px] flex flex-col gap-[6.2px]"
-        aria-label="Service navigation"
-      >
-        {navigationItems.map((item, index) => (
-          <React.Fragment key={item.id}>
-            <div
-              className={`w-[172px] h-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica] font-medium text-base text-center tracking-[0] leading-[30px] ${
-                item.isActive ? "text-white" : "text-[#ffffffa1]"
-              }`}
+          <div className="flex-1 flex items-end">
+            <p className="font-medium text-[#ffffffcc] text-sm lg:text-base leading-relaxed lg:leading-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+              Designed for those who demand more than just a place to live, Iso
+              presents a curated collection of luxury properties that reflect
+              sophistication, innovation, and timeless elegance.
+            </p>
+          </div>
+        </header>
+
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 mb-12 lg:mb-16">
+          <article className="flex-1 flex flex-col gap-6 lg:gap-8">
+            <h3 className="font-medium text-white text-lg lg:text-xl [font-family:'Plus_Jakarta_Sans',Helvetica]">
+              DESIGN CONSULTATION
+            </h3>
+
+            <p className="font-medium text-[#ffffffcc] text-sm lg:text-base leading-relaxed lg:leading-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+              Designed for those who demand more than just a place to live, Iso
+              presents a curated collection of luxury properties that reflect
+              sophistication
+            </p>
+
+            <button
+              className="w-fit bg-[#ffffff0f] border-[#ffffff12] inline-flex items-center justify-center gap-2.5 px-6 lg:px-8 py-3 rounded-[10px] border border-solid backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)] cursor-pointer"
+              aria-label="Learn more about design consultation"
             >
-              {item.label}
+              <span className="text-white text-center font-medium text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] whitespace-nowrap">
+                Learn More
+              </span>
+            </button>
+
+            <nav
+              className="flex flex-col gap-4 lg:gap-6 mt-4"
+              aria-label="Service navigation"
+            >
+              {navigationItems.map((item, index) => (
+                <React.Fragment key={item.id}>
+                  <div
+                    className={`font-medium text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] ${
+                      item.isActive ? "text-white" : "text-[#ffffffa1]"
+                    }`}
+                  >
+                    {item.label}
+                  </div>
+                  {index < navigationItems.length - 1 && (
+                    <div className="w-full h-px bg-[#ffffff30]" />
+                  )}
+                </React.Fragment>
+              ))}
+            </nav>
+          </article>
+
+          <div className="flex-1">
+            <img
+              className="w-full h-auto rounded-2xl object-cover"
+              alt="Luxury property showcase"
+              src="https://c.animaapp.com/3DzYceDx/img/image-5.png"
+            />
+          </div>
+        </div>
+
+        <nav
+          className="flex flex-wrap items-center gap-4 lg:gap-8 xl:gap-12"
+          aria-label="Property categories"
+        >
+          {tags.map((tag) => (
+            <div
+              key={tag.id}
+              className="inline-flex items-center justify-center gap-2.5 px-5 py-2 rounded-full border border-solid border-[#ffffff75]"
+            >
+              <span className="font-medium text-white text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] whitespace-nowrap">
+                {tag.label}
+              </span>
             </div>
-            {index < navigationItems.length - 1 && (
-              <img
-                className="ml-[7.5px] w-[157px] h-[1.5px]"
-                alt=""
-                src={`https://c.animaapp.com/3DzYceDx/img/vector-${45 + index}.svg`}
-                role="presentation"
-              />
-            )}
-          </React.Fragment>
-        ))}
-      </nav>
+          ))}
+        </nav>
+      </div>
     </section>
   );
 };
