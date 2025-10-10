@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useMotionSafe } from "../../../hooks/useMotionSafe";
 
 const navigationItems = [
   { label: "Home", active: true },
@@ -45,12 +46,15 @@ const staggerContainer = {
 
 export const HeroSection = (): JSX.Element => {
   const [scrollY, setScrollY] = useState(0);
+  const shouldReduceMotion = useMotionSafe();
 
   useEffect(() => {
+    if (shouldReduceMotion) return;
+    
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [shouldReduceMotion]);
 
   return (
     <section className="relative w-full min-h-screen bg-colors-miscellaneous-keyboards-glyphs-primary overflow-hidden">
@@ -59,21 +63,21 @@ export const HeroSection = (): JSX.Element => {
         alt="Luxury real estate background"
         src="https://c.animaapp.com/3DzYceDx/img/union.png"
         style={{
-          y: scrollY * 0.5,
+          y: shouldReduceMotion ? 0 : scrollY * 0.5,
         }}
       />
 
       <div className="relative w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.header 
           className="flex flex-col lg:flex-row items-center justify-between py-6 lg:py-10 gap-6"
-          initial="hidden"
-          animate="visible"
-          variants={staggerContainer}
+          initial={shouldReduceMotion ? false : "hidden"}
+          animate={shouldReduceMotion ? false : "visible"}
+          variants={shouldReduceMotion ? {} : staggerContainer}
         >
           <motion.div 
             className="flex items-center gap-3.5"
-            variants={slideInLeftVariants}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            variants={shouldReduceMotion ? {} : slideInLeftVariants}
+            transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut" }}
           >
             <img
               className="w-10 h-10 lg:w-[42.95px] lg:h-[42.95px]"
@@ -88,8 +92,8 @@ export const HeroSection = (): JSX.Element => {
           <motion.nav
             className="hidden lg:flex items-center gap-8 xl:gap-12"
             aria-label="Main navigation"
-            variants={fadeUpVariants}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            variants={shouldReduceMotion ? {} : fadeUpVariants}
+            transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
             {navigationItems.map((item, index) => (
               <React.Fragment key={item.label}>
@@ -115,8 +119,8 @@ export const HeroSection = (): JSX.Element => {
 
           <motion.div 
             className="hidden lg:block"
-            variants={slideInRightVariants}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+            variants={shouldReduceMotion ? {} : slideInRightVariants}
+            transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 0.4 }}
           >
             <img
               className="w-[140px] xl:w-[171.24px] h-auto"
@@ -128,9 +132,9 @@ export const HeroSection = (): JSX.Element => {
 
         <motion.main 
           className="flex flex-col items-center justify-center py-12 lg:py-20 xl:py-28 gap-8 lg:gap-12"
-          initial="hidden"
-          animate="visible"
-          variants={staggerContainer}
+          initial={shouldReduceMotion ? false : "hidden"}
+          animate={shouldReduceMotion ? false : "visible"}
+          variants={shouldReduceMotion ? {} : staggerContainer}
         >
           <motion.div 
             className="inline-flex items-center justify-center gap-2.5 px-5 lg:px-6 py-2 rounded-full border border-solid border-[#ffffff4f]"
