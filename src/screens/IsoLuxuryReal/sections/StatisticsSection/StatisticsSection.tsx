@@ -1,7 +1,41 @@
+import { motion } from "framer-motion";
+
 interface StatisticItem {
   value: string;
   description: string;
 }
+
+// Animation variants
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 60 },
+  visible: { opacity: 1, y: 0 }
+};
+
+const slideInLeftVariants = {
+  hidden: { opacity: 0, x: -60 },
+  visible: { opacity: 1, x: 0 }
+};
+
+const slideInRightVariants = {
+  hidden: { opacity: 0, x: 60 },
+  visible: { opacity: 1, x: 0 }
+};
+
+const scaleInVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1 }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1
+    }
+  }
+};
 
 export const StatisticsSection = (): JSX.Element => {
   const statisticsData: StatisticItem[] = [
@@ -27,7 +61,13 @@ export const StatisticsSection = (): JSX.Element => {
     <section className="relative w-full py-20 md:py-24 bg-black px-8 sm:px-12 md:px-20 lg:px-32">
       <div className="w-full max-w-[1440px] mx-auto">
         {/* Mobile Layout */}
-        <div className="flex flex-col gap-8 lg:hidden">
+        <motion.div 
+          className="flex flex-col gap-8 lg:hidden"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={staggerContainer}
+        >
           {/* Title */}
           <h2 className="text-white text-3xl sm:text-4xl font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-tight">
             Modern Homes. Timeless Elegance.
@@ -72,11 +112,11 @@ export const StatisticsSection = (): JSX.Element => {
           >
             <div className="grid grid-cols-2 gap-8">
               {statisticsData.map((stat, index) => (
-                <div key={index} className="flex flex-col gap-2">
+                <div key={index} className="flex flex-col justify-center gap-3 py-2">
                   <div className="text-white text-4xl font-normal [font-family:'Plus_Jakarta_Sans',Helvetica] uppercase leading-none">
                     {stat.value}
                   </div>
-                  <p className="text-[#ffffffcc] text-xs font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[24px]">
+                  <p className="text-[#ffffffcc] text-xs font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-relaxed">
                     {stat.description}
                   </p>
                 </div>
@@ -132,16 +172,16 @@ export const StatisticsSection = (): JSX.Element => {
             </button>
           </div>
 
-          {/* Stats Card - Right Side */}
+          {/* Stats Card - Right Side - Auto height to prevent clipping */}
           <div className="absolute top-0 left-[870px] w-[650px]">
             <div
-              className="w-full h-[533px] bg-[#ffffff0f] rounded-[30px] border border-[#ffffff30] backdrop-blur-[40px] p-12"
+              className="w-full h-auto min-h-[533px] bg-[#ffffff0f] rounded-[30px] border border-[#ffffff30] backdrop-blur-[40px] p-12"
               role="region"
               aria-label="Statistics"
             >
               <div className="grid grid-cols-2 gap-x-20 gap-y-16">
                 {statisticsData.map((stat, index) => (
-                  <div key={index} className="flex flex-col gap-4">
+                  <div key={index} className="flex flex-col justify-center gap-4 py-4">
                     <div className="text-white text-[64px] font-normal [font-family:'Plus_Jakarta_Sans',Helvetica] uppercase leading-none">
                       {stat.value}
                     </div>
