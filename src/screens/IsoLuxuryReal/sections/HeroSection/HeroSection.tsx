@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useMotionSafe } from "../../../../hooks/useMotionSafe";
+import { smoothScrollTo } from "../../../../utils/smoothScroll";
 
 const navigationItems = [
-  { label: "Home", active: true },
-  { label: "About", active: false },
-  { label: "Features", active: false },
-  { label: "Services", active: false },
-  { label: "Pages", active: false },
+  { label: "Home", sectionId: "hero", active: true },
+  { label: "About", sectionId: "about", active: false },
+  { label: "Features", sectionId: "features", active: false },
+  { label: "Services", sectionId: "services", active: false },
+  { label: "Testimonials", sectionId: "testimonials", active: false },
 ];
 
 const avatarImages = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
@@ -46,7 +47,8 @@ const staggerContainer = {
 
 export const HeroSection = (): JSX.Element => {
   const [scrollY, setScrollY] = useState(0);
-  const shouldReduceMotion = useMotionSafe();
+  const motionSafe = useMotionSafe();
+  const shouldReduceMotion = !motionSafe;
 
   useEffect(() => {
     if (shouldReduceMotion) return;
@@ -97,14 +99,15 @@ export const HeroSection = (): JSX.Element => {
           >
             {navigationItems.map((item, index) => (
               <React.Fragment key={item.label}>
-                <a
-                  href={`#${item.label.toLowerCase()}`}
-                  className={`font-medium text-sm xl:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] whitespace-nowrap ${
+                <button
+                  onClick={() => smoothScrollTo(item.sectionId)}
+                  className={`font-medium text-sm xl:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] whitespace-nowrap cursor-pointer hover:text-white transition-colors ${
                     item.active ? "text-white" : "text-[#ffffffcc]"
                   }`}
+                  aria-label={`Navigate to ${item.label}`}
                 >
                   {item.label}
-                </a>
+                </button>
                 {index < navigationItems.length - 1 && (
                   <img
                     className="w-4 h-4"
@@ -172,6 +175,7 @@ export const HeroSection = (): JSX.Element => {
             transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 1.2 }}
           >
             <motion.button
+              onClick={() => smoothScrollTo('features')}
               className="bg-[#ffffff29] border-[#ffffff30] inline-flex items-center justify-center gap-2.5 px-6 lg:px-8 py-3 rounded-[10px] border border-solid backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)] cursor-pointer hover:bg-[#ffffff39] transition-all"
               aria-label="Discover more about our luxury properties"
               whileHover={shouldReduceMotion ? {} : { scale: 1.05 }}
