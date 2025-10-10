@@ -198,7 +198,7 @@ export const StatisticsSection = (): JSX.Element => {
 
           {/* Stats Card - Right Side - Auto height to prevent clipping */}
           <motion.div 
-            className="absolute top-0 left-[870px] w-[650px]"
+            className="absolute top-0 right-0 w-[650px] max-w-[45%]"
             variants={slideInRightVariants}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
           >
