@@ -69,64 +69,98 @@ export const StatisticsSection = (): JSX.Element => {
           variants={staggerContainer}
         >
           {/* Title */}
-          <h2 className="text-white text-3xl sm:text-4xl font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-tight">
+          <motion.h2 
+            className="text-white text-3xl sm:text-4xl font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-tight"
+            variants={fadeUpVariants}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             Modern Homes. Timeless Elegance.
-          </h2>
+          </motion.h2>
 
           {/* Image */}
-          <img
+          <motion.img
             className="w-full max-w-[280px] h-auto rounded-[24px] object-cover"
             alt="Modern luxury home interior"
             src="https://c.animaapp.com/3DzYceDx/img/image@2x.png"
+            variants={scaleInVariants}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           />
 
           {/* Description */}
-          <p className="text-[#ffffffcc] text-sm font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[26px]">
+          <motion.p 
+            className="text-[#ffffffcc] text-sm font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[26px]"
+            variants={fadeUpVariants}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          >
             At Iso, we bring together contemporary design and classic sophistication to create homes that stand the test of time.
-          </p>
+          </motion.p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap items-center gap-4 mb-6">
-            <button
+          <motion.div 
+            className="flex flex-wrap items-center gap-4 mb-6"
+            variants={fadeUpVariants}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          >
+            <motion.button
               className="bg-[#ffffff0f] border border-[#ffffff12] rounded-[8px] px-6 py-2.5 backdrop-blur-[40px] hover:bg-[#ffffff15] transition-all cursor-pointer"
               aria-label="Learn more about Iso luxury real estate"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <span className="text-white text-sm font-medium [font-family:'Poppins',Helvetica] leading-[26px]">
                 Learn More
               </span>
-            </button>
+            </motion.button>
 
-            <button
+            <motion.button
               className="text-white text-sm font-semibold [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[26px] cursor-pointer hover:underline"
               aria-label="Contact us"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               Contact Us
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
 
           {/* Stats Card */}
-          <div
+          <motion.div
             className="w-full bg-[#ffffff0f] rounded-[24px] border border-[#ffffff30] backdrop-blur-[40px] p-6 mb-8"
             role="region"
             aria-label="Statistics"
+            variants={scaleInVariants}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
           >
             <div className="grid grid-cols-2 gap-8">
               {statisticsData.map((stat, index) => (
-                <div key={index} className="flex flex-col justify-center gap-3 py-2">
+                <motion.div 
+                  key={index} 
+                  className="flex flex-col justify-center gap-3 py-2"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, ease: "easeOut", delay: 1.0 + (index * 0.1) }}
+                >
                   <div className="text-white text-4xl font-normal [font-family:'Plus_Jakarta_Sans',Helvetica] uppercase leading-none">
                     {stat.value}
                   </div>
                   <p className="text-[#ffffffcc] text-xs font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-relaxed">
                     {stat.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Desktop Layout - Absolute positioning matching Figma */}
-        <div className="hidden lg:block relative w-full" style={{ minHeight: "533px" }}>
+        <motion.div 
+          className="hidden lg:block relative w-full" 
+          style={{ minHeight: "533px" }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={staggerContainer}
+        >
           {/* Title - Top Left - Single line or proper break */}
           <div className="absolute top-0 left-0 w-[766px]">
             <h2 className="text-white text-[80px] font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[120px]">
