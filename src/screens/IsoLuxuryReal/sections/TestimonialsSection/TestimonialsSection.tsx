@@ -82,7 +82,7 @@ export const TestimonialsSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full py-20 md:py-24 bg-black px-8 sm:px-12 md:px-20 lg:px-32">
+    <section id="testimonials" className="relative w-full py-20 md:py-24 bg-black px-8 sm:px-12 md:px-20 lg:px-32">
       <div className="w-full max-w-[1440px] mx-auto">
         <motion.h2 
           className="font-medium text-white text-3xl sm:text-4xl lg:text-[clamp(3rem,4vw,4rem)] text-center leading-tight lg:leading-[1.3] mb-12 lg:mb-16 [font-family:'Plus_Jakarta_Sans',Helvetica]"

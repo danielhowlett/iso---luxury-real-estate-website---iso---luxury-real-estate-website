@@ -57,7 +57,7 @@ export const HeroSection = (): JSX.Element => {
   }, [shouldReduceMotion]);
 
   return (
-    <section className="relative w-full min-h-screen bg-colors-miscellaneous-keyboards-glyphs-primary overflow-hidden">
+    <section id="hero" className="relative w-full min-h-screen bg-colors-miscellaneous-keyboards-glyphs-primary overflow-hidden">
       <motion.img
         className="absolute top-0 left-0 w-full h-full mix-blend-overlay object-cover"
         alt="Luxury real estate background"

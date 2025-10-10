@@ -39,7 +39,7 @@ const lodgingData: LodgingCardData[] = [
 
 export const LodgingSection = (): JSX.Element => {
   return (
-    <section className="relative w-full py-20 md:py-24 bg-black px-8 sm:px-12 md:px-20 lg:px-32">
+    <section id="features" className="relative w-full py-20 md:py-24 bg-black px-8 sm:px-12 md:px-20 lg:px-32">
       <div className="w-full max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {lodgingData.map((lodging) => (

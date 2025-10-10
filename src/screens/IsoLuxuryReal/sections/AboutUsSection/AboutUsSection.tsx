@@ -46,7 +46,7 @@ const staggerContainer = {
 
 export const AboutUsSection = (): JSX.Element => {
   return (
-    <section className="relative w-full py-20 md:py-24 bg-black px-8 sm:px-12 md:px-20 lg:px-32">
+    <section id="about" className="relative w-full py-20 md:py-24 bg-black px-8 sm:px-12 md:px-20 lg:px-32">
       <div className="w-full max-w-[1440px] mx-auto">
         {/* Mobile Layout */}
         <motion.div 
