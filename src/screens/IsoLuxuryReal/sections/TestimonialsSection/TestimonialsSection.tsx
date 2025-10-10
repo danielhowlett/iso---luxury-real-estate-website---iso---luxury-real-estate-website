@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 interface Testimonial {
   id: number;
   name: string;
@@ -6,6 +8,38 @@ interface Testimonial {
   image: string;
   imageAlt: string;
 }
+
+// Animation variants
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 60 },
+  visible: { opacity: 1, y: 0 }
+};
+
+const slideInLeftVariants = {
+  hidden: { opacity: 0, x: -60 },
+  visible: { opacity: 1, x: 0 }
+};
+
+const slideInRightVariants = {
+  hidden: { opacity: 0, x: 60 },
+  visible: { opacity: 1, x: 0 }
+};
+
+const scaleInVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1 }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1
+    }
+  }
+};
 
 export const TestimonialsSection = (): JSX.Element => {
   const testimonials: Testimonial[] = [

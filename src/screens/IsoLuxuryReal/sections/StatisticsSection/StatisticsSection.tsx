@@ -128,72 +128,109 @@ export const StatisticsSection = (): JSX.Element => {
         {/* Desktop Layout - Absolute positioning matching Figma */}
         <div className="hidden lg:block relative w-full" style={{ minHeight: "533px" }}>
           {/* Title - Top Left - Single line or proper break */}
-          <div className="absolute top-0 left-0 w-[766px]">
+          <motion.div 
+            className="absolute top-0 left-0 w-[766px]"
+            variants={slideInLeftVariants}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <h2 className="text-white text-[80px] font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[120px]">
               Modern Homes. Timeless Elegance.
             </h2>
-          </div>
+          </motion.div>
 
           {/* Image - Bottom Left */}
-          <div className="absolute top-[289px] left-0">
+          <motion.div 
+            className="absolute top-[289px] left-0"
+            variants={slideInLeftVariants}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          >
             <img
               className="w-[279px] h-[244px] rounded-[30px] object-cover"
               alt="Modern luxury home interior"
               src="https://c.animaapp.com/3DzYceDx/img/image@2x.png"
             />
-          </div>
+          </motion.div>
 
           {/* Description Text - Middle */}
-          <div className="absolute top-[318px] left-[347px] w-[431px]">
+          <motion.div 
+            className="absolute top-[318px] left-[347px] w-[431px]"
+            variants={fadeUpVariants}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          >
             <p className="text-[#ffffffcc] text-base font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[30px]">
               At Iso, we bring together contemporary design and classic sophistication to create homes that stand the test of time.
             </p>
-          </div>
+          </motion.div>
 
           {/* Learn More Button */}
-          <div className="absolute top-[450px] left-[344px]">
-            <button
+          <motion.div 
+            className="absolute top-[450px] left-[344px]"
+            variants={scaleInVariants}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          >
+            <motion.button
               className="bg-[#ffffff0f] border border-[#ffffff12] rounded-[10px] px-[30px] py-3 backdrop-blur-[40px] hover:bg-[#ffffff15] transition-all cursor-pointer"
               aria-label="Learn more about Iso luxury real estate"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <span className="text-white text-base font-medium [font-family:'Poppins',Helvetica] leading-[30px]">
                 Learn More
               </span>
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
 
           {/* Contact Us Link */}
-          <div className="absolute top-[462px] left-[540px]">
-            <button
+          <motion.div 
+            className="absolute top-[462px] left-[540px]"
+            variants={scaleInVariants}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+          >
+            <motion.button
               className="text-white text-base font-semibold [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[30px] cursor-pointer hover:underline"
               aria-label="Contact us"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               Contact Us
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
 
           {/* Stats Card - Right Side - Auto height to prevent clipping */}
-          <div className="absolute top-0 left-[870px] w-[650px]">
-            <div
+          <motion.div 
+            className="absolute top-0 left-[870px] w-[650px]"
+            variants={slideInRightVariants}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          >
+            <motion.div
               className="w-full h-auto min-h-[533px] bg-[#ffffff0f] rounded-[30px] border border-[#ffffff30] backdrop-blur-[40px] p-12"
               role="region"
               aria-label="Statistics"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
             >
               <div className="grid grid-cols-2 gap-x-20 gap-y-16">
                 {statisticsData.map((stat, index) => (
-                  <div key={index} className="flex flex-col justify-center gap-4 py-4">
+                  <motion.div 
+                    key={index} 
+                    className="flex flex-col justify-center gap-4 py-4"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 1.0 + (index * 0.1) }}
+                  >
                     <div className="text-white text-[64px] font-normal [font-family:'Plus_Jakarta_Sans',Helvetica] uppercase leading-none">
                       {stat.value}
                     </div>
                     <p className="text-[#ffffffcc] text-base font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[30px] max-w-[214px]">
                       {stat.description}
                     </p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
