@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { useMotionSafe } from "../../../hooks/useMotionSafe";
+import { useMotionSafe } from "../../../../hooks/useMotionSafe";
 
 const navigationItems = [
   { label: "Home", active: true },
@@ -138,8 +138,8 @@ export const HeroSection = (): JSX.Element => {
         >
           <motion.div 
             className="inline-flex items-center justify-center gap-2.5 px-5 lg:px-6 py-2 rounded-full border border-solid border-[#ffffff4f]"
-            variants={fadeUpVariants}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+            variants={shouldReduceMotion ? {} : fadeUpVariants}
+            transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 0.6 }}
           >
             <span className="font-medium text-[#ffffffdb] text-xs lg:text-sm xl:text-base text-center tracking-[0.3em] lg:tracking-[0.46em] [font-family:'Plus_Jakarta_Sans',Helvetica] whitespace-nowrap">
               LUXURY REAL ESTATE
@@ -148,16 +148,16 @@ export const HeroSection = (): JSX.Element => {
 
           <motion.h1 
             className="w-full max-w-[90%] lg:max-w-[1040px] font-medium text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center leading-tight lg:leading-[1.35] [font-family:'Plus_Jakarta_Sans',Helvetica]"
-            variants={fadeUpVariants}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+            variants={shouldReduceMotion ? {} : fadeUpVariants}
+            transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 0.8 }}
           >
             Discover Your Space. Redefined.
           </motion.h1>
 
           <motion.p 
             className="w-full max-w-[90%] lg:max-w-[930px] font-medium text-[#ffffffcc] text-sm lg:text-base text-center leading-relaxed lg:leading-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica]"
-            variants={fadeUpVariants}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 1.0 }}
+            variants={shouldReduceMotion ? {} : fadeUpVariants}
+            transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 1.0 }}
           >
             Step into a new dimension of living — where architecture meets
             artistry and every detail is thoughtfully designed to elevate your
@@ -168,14 +168,14 @@ export const HeroSection = (): JSX.Element => {
 
           <motion.div 
             className="flex flex-col sm:flex-row items-center gap-6 lg:gap-8 mt-4 lg:mt-8"
-            variants={fadeUpVariants}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
+            variants={shouldReduceMotion ? {} : fadeUpVariants}
+            transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 1.2 }}
           >
             <motion.button
               className="bg-[#ffffff29] border-[#ffffff30] inline-flex items-center justify-center gap-2.5 px-6 lg:px-8 py-3 rounded-[10px] border border-solid backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)] cursor-pointer hover:bg-[#ffffff39] transition-all"
               aria-label="Discover more about our luxury properties"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={shouldReduceMotion ? {} : { scale: 1.05 }}
+              whileTap={shouldReduceMotion ? {} : { scale: 0.95 }}
             >
               <img
                 className="w-5 h-5 lg:w-6 lg:h-6"
@@ -190,8 +190,8 @@ export const HeroSection = (): JSX.Element => {
 
             <motion.div 
               className="flex items-center gap-4"
-              variants={scaleInVariants}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 1.4 }}
+              variants={shouldReduceMotion ? {} : scaleInVariants}
+              transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 1.4 }}
             >
               <div className="flex" role="list" aria-label="Customer avatars">
                 {avatarImages.map((avatar, index) => (
@@ -201,9 +201,9 @@ export const HeroSection = (): JSX.Element => {
                     style={{ marginLeft: index > 0 ? "-12px" : "0" }}
                     role="listitem"
                     aria-label={`Customer ${index + 1}`}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ 
+                    initial={shouldReduceMotion ? false : { scale: 0 }}
+                    animate={shouldReduceMotion ? false : { scale: 1 }}
+                    transition={shouldReduceMotion ? {} : { 
                       duration: 0.5, 
                       ease: "easeOut", 
                       delay: 1.6 + (index * 0.1) 

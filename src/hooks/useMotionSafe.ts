@@ -1,19 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-export const useMotionSafe = () => {
-  const [shouldReduceMotion, setShouldReduceMotion] = useState(false);
+export function useMotionSafe(): boolean {
+  const [motionSafe, setMotionSafe] = useState(true);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setShouldReduceMotion(mediaQuery.matches);
+    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setMotionSafe(!query.matches);
 
-    const handleChange = (event: MediaQueryListEvent) => {
-      setShouldReduceMotion(event.matches);
+    const handler = (event: MediaQueryListEvent) => {
+      setMotionSafe(!event.matches);
     };
 
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    query.addEventListener("change", handler);
+    return () => query.removeEventListener("change", handler);
   }, []);
 
-  return shouldReduceMotion;
-};
+  return motionSafe;
+}
