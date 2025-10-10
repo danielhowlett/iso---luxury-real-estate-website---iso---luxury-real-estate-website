@@ -1,0 +1,24 @@
+<div style="width: 100%; height: 100%; position: relative">
+    <div style="width: 587px; left: 828px; top: 131px; position: absolute; color: rgba(255, 255, 255, 0.80); font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">Designed for those who demand more than just a place to live, Iso presents a curated collection of luxury properties that reflect sophistication, innovation, and timeless elegance.</div>
+    <div style="width: 744px; left: 0px; top: 0px; position: absolute; color: white; font-size: 80px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 120px; word-wrap: break-word">Crafted for the Modern Elite</div>
+    <img style="width: 914px; height: 430px; left: 606px; top: 347px; position: absolute; border-radius: 30px" src="https://placehold.co/914x430" />
+    <div style="width: 447px; left: 0px; top: 408px; position: absolute; color: rgba(255, 255, 255, 0.80); font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">Designed for those who demand more than just a place to live, Iso presents a curated collection of luxury properties that reflect sophistication</div>
+    <div style="left: 0px; top: 347px; position: absolute; color: white; font-size: 20px; font-family: Plus Jakarta Sans; font-weight: 500; text-transform: uppercase; line-height: 30px; word-wrap: break-word">Design Consultation</div>
+    <div style="padding-left: 30px; padding-right: 30px; padding-top: 12px; padding-bottom: 12px; left: 0px; top: 539px; position: absolute; background: rgba(255, 255, 255, 0.06); border-radius: 10px; outline: 1px rgba(255, 255, 255, 0.07) solid; outline-offset: -1px; backdrop-filter: blur(40px); justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+        <div style="text-align: center; color: white; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">Learn More</div>
+    </div>
+    <div style="left: 0px; top: 737px; position: absolute; justify-content: flex-start; align-items: center; gap: 99px; display: inline-flex">
+        <div style="padding-left: 20px; padding-right: 20px; padding-top: 5px; padding-bottom: 5px; border-radius: 100px; outline: 1px rgba(255, 255, 255, 0.46) solid; outline-offset: -1px; justify-content: center; align-items: center; gap: 10px; display: flex">
+            <div style="color: white; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">Property</div>
+        </div>
+        <div style="padding-left: 20px; padding-right: 20px; padding-top: 5px; padding-bottom: 5px; border-radius: 100px; outline: 1px rgba(255, 255, 255, 0.46) solid; outline-offset: -1px; justify-content: center; align-items: center; gap: 10px; display: flex">
+            <div style="color: white; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">Estate</div>
+        </div>
+        <div style="padding-left: 20px; padding-right: 20px; padding-top: 5px; padding-bottom: 5px; border-radius: 100px; outline: 1px rgba(255, 255, 255, 0.46) solid; outline-offset: -1px; justify-content: center; align-items: center; gap: 10px; display: flex">
+            <div style="color: white; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">Private</div>
+        </div>
+    </div>
+    <div style="width: 172px; left: 288px; top: 539px; position: absolute; text-align: center; color: rgba(255, 255, 255, 0.63); font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">Advisory</div>
+    <div style="width: 172px; left: 288px; top: 583px; position: absolute; text-align: center; color: white; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">High-End Property</div>
+    <div style="width: 172px; left: 288px; top: 627px; position: absolute; text-align: center; color: rgba(255, 255, 255, 0.63); font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">Services</div>
+</div>

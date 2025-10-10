@@ -1,0 +1,88 @@
+// Designed for those who demand more than just a place to live, Iso presents a curated collection of luxury properties that reflect sophistication, innovation, and timeless elegance.
+color: rgba(255, 255, 255, 0.80);
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// Crafted for the Modern Elite
+color: white;
+ font-size: 80px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 120px;
+ word-wrap: break-word
+---
+// Designed for those who demand more than just a place to live, Iso presents a curated collection of luxury properties that reflect sophistication
+color: rgba(255, 255, 255, 0.80);
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// Design Consultation
+color: white;
+ font-size: 20px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ text-transform: uppercase;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// Learn More
+color: white;
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// Property
+color: white;
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// Estate
+color: white;
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// Private
+color: white;
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// Advisory
+color: rgba(255, 255, 255, 0.63);
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// High-End Property
+color: white;
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// Services
+color: rgba(255, 255, 255, 0.63);
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
