@@ -48,13 +48,13 @@ export const TestimonialsSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full py-16 bg-black px-6 sm:px-8 md:px-12">
-      <div className="w-full max-w-[1520px] mx-auto">
-        <h2 className="font-medium text-white text-4xl sm:text-5xl lg:text-6xl xl:text-[80px] text-center leading-tight lg:leading-[1.5] mb-12 lg:mb-16 xl:mb-20 [font-family:'Plus_Jakarta_Sans',Helvetica]">
+    <section className="relative w-full py-20 md:py-24 bg-black px-8 sm:px-12 md:px-20 lg:px-32">
+      <div className="w-full max-w-[1440px] mx-auto">
+        <h2 className="font-medium text-white text-3xl sm:text-4xl lg:text-[clamp(3rem,4vw,4rem)] text-center leading-tight lg:leading-[1.3] mb-12 lg:mb-16 [font-family:'Plus_Jakarta_Sans',Helvetica]">
           What Our Clients Are Saying
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {testimonials.map((testimonial) => (
             <article
               key={testimonial.id}

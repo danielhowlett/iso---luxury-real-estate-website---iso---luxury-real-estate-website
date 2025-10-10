@@ -50,8 +50,8 @@ const contactInfo: ContactInfo[] = [
 
 export const FooterSection = (): JSX.Element => {
   return (
-    <footer className="relative w-full border-t border-[#ffffff30] py-16 bg-black px-6 sm:px-8 md:px-12">
-      <div className="w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="relative w-full border-t border-[#ffffff30] py-20 md:py-24 bg-black px-8 sm:px-12 md:px-20 lg:px-32">
+      <div className="w-full max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-8 lg:mb-12">
           <div className="sm:col-span-2 lg:col-span-1 flex flex-col gap-6">
             <div className="flex items-center gap-3.5">

@@ -18,17 +18,17 @@ export const VideoSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full py-16 bg-black px-6 sm:px-8 md:px-12">
-      <div className="w-full max-w-[1520px] mx-auto">
-        <header className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 mb-12 lg:mb-16">
+    <section className="relative w-full py-20 md:py-24 bg-black px-8 sm:px-12 md:px-20 lg:px-32">
+      <div className="w-full max-w-[1440px] mx-auto">
+        <header className="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-12 lg:mb-16">
           <div className="flex-1">
-            <h2 className="font-medium text-white text-4xl sm:text-5xl lg:text-6xl xl:text-[80px] leading-tight lg:leading-[1.5] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+            <h2 className="font-medium text-white text-3xl sm:text-4xl lg:text-[clamp(3rem,4vw,4rem)] leading-tight lg:leading-[1.3] [font-family:'Plus_Jakarta_Sans',Helvetica]">
               Luxury Properties for Visionary Living
             </h2>
           </div>
 
           <div className="flex-1 flex items-end">
-            <p className="font-medium text-[#ffffffcc] text-sm lg:text-base leading-relaxed lg:leading-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+            <p className="font-medium text-[#ffffffcc] text-sm leading-relaxed lg:leading-[26px] [font-family:'Plus_Jakarta_Sans',Helvetica]">
               At Iso, we believe that a home is more than a structure — it&#39;s a
               statement. Our portfolio is a celebration of refined architecture and
               serene landscapes
