@@ -1,0 +1,18 @@
+<div style="width: 100%; height: 100%; position: relative">
+    <div style="width: 766px; left: 0px; top: 0px; position: absolute; color: white; font-size: 80px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 120px; word-wrap: break-word">Modern Homes. Timeless Elegance.</div>
+    <div style="width: 431px; left: 347px; top: 318px; position: absolute; color: rgba(255, 255, 255, 0.80); font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">At Iso, we bring together contemporary design and classic sophistication to create homes that stand the test of time. </div>
+    <div style="padding-left: 30px; padding-right: 30px; padding-top: 12px; padding-bottom: 12px; left: 344px; top: 450px; position: absolute; background: rgba(255, 255, 255, 0.06); border-radius: 10px; outline: 1px rgba(255, 255, 255, 0.07) solid; outline-offset: -1px; backdrop-filter: blur(40px); justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+        <div style="color: white; font-size: 16px; font-family: Poppins; font-weight: 500; line-height: 30px; word-wrap: break-word">Learn More</div>
+    </div>
+    <div style="left: 540px; top: 462px; position: absolute; color: white; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 600; line-height: 30px; word-wrap: break-word">Contact Us</div>
+    <div style="width: 650px; height: 533px; left: 870px; top: 0px; position: absolute; background: rgba(255, 255, 255, 0.06); border-radius: 30px; border: 1px rgba(255, 255, 255, 0.19) solid; backdrop-filter: blur(40px)"></div>
+    <div style="width: 214px; left: 962px; top: 151px; position: absolute; color: rgba(255, 255, 255, 0.80); font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">Users finish their weekly training cycles</div>
+    <div style="left: 962px; top: 63px; position: absolute; color: white; font-size: 64px; font-family: Plus Jakarta Sans; font-weight: 400; text-transform: uppercase; word-wrap: break-word">92%</div>
+    <div style="width: 214px; left: 962px; top: 388px; position: absolute; color: rgba(255, 255, 255, 0.80); font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">Clean, simple design reduces friction</div>
+    <div style="left: 962px; top: 300px; position: absolute; color: white; font-size: 64px; font-family: Plus Jakarta Sans; font-weight: 400; text-transform: uppercase; word-wrap: break-word">3x</div>
+    <div style="width: 193px; left: 1254px; top: 151px; position: absolute; color: rgba(255, 255, 255, 0.80); font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">Backed by thousands of reviews</div>
+    <div style="left: 1254px; top: 63px; position: absolute; color: white; font-size: 64px; font-family: Plus Jakarta Sans; font-weight: 400; text-transform: uppercase; word-wrap: break-word">4.9</div>
+    <div style="width: 200px; left: 1254px; top: 388px; position: absolute; color: rgba(255, 255, 255, 0.80); font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 500; line-height: 30px; word-wrap: break-word">Most users complete a workout</div>
+    <div style="left: 1254px; top: 300px; position: absolute; color: white; font-size: 64px; font-family: Plus Jakarta Sans; font-weight: 400; text-transform: uppercase; word-wrap: break-word">80%</div>
+    <img style="width: 279px; height: 244px; left: 0px; top: 289px; position: absolute; border-radius: 30px" src="https://placehold.co/279x244" />
+</div>
