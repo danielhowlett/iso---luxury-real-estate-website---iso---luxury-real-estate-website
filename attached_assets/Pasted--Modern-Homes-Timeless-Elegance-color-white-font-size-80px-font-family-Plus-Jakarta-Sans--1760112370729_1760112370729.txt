@@ -1,0 +1,95 @@
+// Modern Homes. Timeless Elegance.
+color: white;
+ font-size: 80px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 120px;
+ word-wrap: break-word
+---
+// At Iso, we bring together contemporary design and classic sophistication to create homes that stand the test of time. 
+color: rgba(255, 255, 255, 0.80);
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// Learn More
+color: white;
+ font-size: 16px;
+ font-family: Poppins;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// Contact Us
+color: white;
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 600;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// Users finish their weekly training cycles
+color: rgba(255, 255, 255, 0.80);
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// 92%
+color: white;
+ font-size: 64px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 400;
+ text-transform: uppercase;
+ word-wrap: break-word
+---
+// Clean, simple design reduces friction
+color: rgba(255, 255, 255, 0.80);
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// 3x
+color: white;
+ font-size: 64px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 400;
+ text-transform: uppercase;
+ word-wrap: break-word
+---
+// Backed by thousands of reviews
+color: rgba(255, 255, 255, 0.80);
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// 4.9
+color: white;
+ font-size: 64px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 400;
+ text-transform: uppercase;
+ word-wrap: break-word
+---
+// Most users complete a workout
+color: rgba(255, 255, 255, 0.80);
+ font-size: 16px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 500;
+ line-height: 30px;
+ word-wrap: break-word
+---
+// 80%
+color: white;
+ font-size: 64px;
+ font-family: Plus Jakarta Sans;
+ font-weight: 400;
+ text-transform: uppercase;
+ word-wrap: break-word

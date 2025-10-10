@@ -85,47 +85,47 @@ export const StatisticsSection = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Desktop Layout - Absolute positioning */}
-        <div className="hidden lg:block relative w-full" style={{ minHeight: "450px" }}>
-          {/* Title - Top Left */}
-          <div className="absolute top-0 left-0 w-[640px]">
-            <h2 className="text-white text-[clamp(3.5rem,5vw,5rem)] font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[1.2]">
+        {/* Desktop Layout - Absolute positioning matching Figma */}
+        <div className="hidden lg:block relative w-full" style={{ minHeight: "533px" }}>
+          {/* Title - Top Left - Single line or proper break */}
+          <div className="absolute top-0 left-0 w-[766px]">
+            <h2 className="text-white text-[80px] font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[120px]">
               Modern Homes. Timeless Elegance.
             </h2>
           </div>
 
           {/* Image - Bottom Left */}
-          <div className="absolute top-[240px] left-0">
+          <div className="absolute top-[289px] left-0">
             <img
-              className="w-[230px] h-[200px] rounded-[24px] object-cover"
+              className="w-[279px] h-[244px] rounded-[30px] object-cover"
               alt="Modern luxury home interior"
               src="https://c.animaapp.com/3DzYceDx/img/image@2x.png"
             />
           </div>
 
           {/* Description Text - Middle */}
-          <div className="absolute top-[265px] left-[290px] w-[360px]">
-            <p className="text-[#ffffffcc] text-sm font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[26px]">
+          <div className="absolute top-[318px] left-[347px] w-[431px]">
+            <p className="text-[#ffffffcc] text-base font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[30px]">
               At Iso, we bring together contemporary design and classic sophistication to create homes that stand the test of time.
             </p>
           </div>
 
           {/* Learn More Button */}
-          <div className="absolute top-[375px] left-[287px]">
+          <div className="absolute top-[450px] left-[344px]">
             <button
-              className="bg-[#ffffff0f] border border-[#ffffff12] rounded-[8px] px-6 py-2.5 backdrop-blur-[40px] hover:bg-[#ffffff15] transition-all cursor-pointer"
+              className="bg-[#ffffff0f] border border-[#ffffff12] rounded-[10px] px-[30px] py-3 backdrop-blur-[40px] hover:bg-[#ffffff15] transition-all cursor-pointer"
               aria-label="Learn more about Iso luxury real estate"
             >
-              <span className="text-white text-sm font-medium [font-family:'Poppins',Helvetica] leading-[26px]">
+              <span className="text-white text-base font-medium [font-family:'Poppins',Helvetica] leading-[30px]">
                 Learn More
               </span>
             </button>
           </div>
 
           {/* Contact Us Link */}
-          <div className="absolute top-[385px] left-[450px]">
+          <div className="absolute top-[462px] left-[540px]">
             <button
-              className="text-white text-sm font-semibold [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[26px] cursor-pointer hover:underline"
+              className="text-white text-base font-semibold [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[30px] cursor-pointer hover:underline"
               aria-label="Contact us"
             >
               Contact Us
@@ -133,19 +133,19 @@ export const StatisticsSection = (): JSX.Element => {
           </div>
 
           {/* Stats Card - Right Side */}
-          <div className="absolute top-0 left-[720px] w-[540px]">
+          <div className="absolute top-0 left-[870px] w-[650px]">
             <div
-              className="w-full h-[445px] bg-[#ffffff0f] rounded-[24px] border border-[#ffffff30] backdrop-blur-[40px] p-10"
+              className="w-full h-[533px] bg-[#ffffff0f] rounded-[30px] border border-[#ffffff30] backdrop-blur-[40px] p-12"
               role="region"
               aria-label="Statistics"
             >
-              <div className="grid grid-cols-2 gap-x-16 gap-y-14">
+              <div className="grid grid-cols-2 gap-x-20 gap-y-16">
                 {statisticsData.map((stat, index) => (
-                  <div key={index} className="flex flex-col gap-3">
-                    <div className="text-white text-[clamp(2.5rem,4vw,3.5rem)] font-normal [font-family:'Plus_Jakarta_Sans',Helvetica] uppercase leading-none">
+                  <div key={index} className="flex flex-col gap-4">
+                    <div className="text-white text-[64px] font-normal [font-family:'Plus_Jakarta_Sans',Helvetica] uppercase leading-none">
                       {stat.value}
                     </div>
-                    <p className="text-[#ffffffcc] text-sm font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[26px] max-w-[180px]">
+                    <p className="text-[#ffffffcc] text-base font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[30px] max-w-[214px]">
                       {stat.description}
                     </p>
                   </div>

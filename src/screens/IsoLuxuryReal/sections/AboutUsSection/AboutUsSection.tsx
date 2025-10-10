@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const tags = [
   { id: 1, label: "Property" },
   { id: 2, label: "Estate" },
@@ -9,6 +11,38 @@ const navigationItems = [
   { id: 2, label: "High-End Property", isActive: true },
   { id: 3, label: "Services", isActive: false },
 ];
+
+// Animation variants
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 60 },
+  visible: { opacity: 1, y: 0 }
+};
+
+const slideInLeftVariants = {
+  hidden: { opacity: 0, x: -60 },
+  visible: { opacity: 1, x: 0 }
+};
+
+const slideInRightVariants = {
+  hidden: { opacity: 0, x: 60 },
+  visible: { opacity: 1, x: 0 }
+};
+
+const scaleInVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1 }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1
+    }
+  }
+};
 
 export const AboutUsSection = (): JSX.Element => {
   return (
