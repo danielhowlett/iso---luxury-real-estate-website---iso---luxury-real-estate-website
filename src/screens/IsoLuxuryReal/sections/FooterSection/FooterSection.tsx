@@ -1,5 +1,8 @@
+import { smoothScrollTo } from "../../utils/smoothScroll";
+
 interface FooterLink {
   text: string;
+  sectionId?: string;
 }
 
 interface ContactInfo {
@@ -9,8 +12,8 @@ interface ContactInfo {
 }
 
 const companyLinks: FooterLink[] = [
-  { text: "About Us" },
-  { text: "Our Story" },
+  { text: "About Us", sectionId: "about" },
+  { text: "Our Story", sectionId: "about" },
   { text: "Careers" },
   { text: "Press" },
   { text: "Blog" },
@@ -81,12 +84,12 @@ export const FooterSection = (): JSX.Element => {
             <ul className="flex flex-col gap-3 lg:gap-4">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href="#"
-                    className="font-medium text-[#ffffffcc] text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] hover:text-white transition-colors"
+                  <button
+                    onClick={() => link.sectionId && smoothScrollTo(link.sectionId)}
+                    className="font-medium text-[#ffffffcc] text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] hover:text-white transition-colors cursor-pointer text-left"
                   >
                     {link.text}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>

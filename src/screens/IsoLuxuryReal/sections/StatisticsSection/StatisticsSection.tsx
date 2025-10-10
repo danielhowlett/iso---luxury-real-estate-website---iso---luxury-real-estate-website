@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { smoothScrollTo } from "../../utils/smoothScroll";
 
 interface StatisticItem {
   value: string;
@@ -97,6 +98,7 @@ export const StatisticsSection = (): JSX.Element => {
             </button>
 
             <button
+              onClick={() => smoothScrollTo('contact')}
               className="text-white text-sm font-semibold [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[26px] cursor-pointer hover:underline"
               aria-label="Contact us"
             >
@@ -187,6 +189,7 @@ export const StatisticsSection = (): JSX.Element => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
           >
             <motion.button
+              onClick={() => smoothScrollTo('contact')}
               className="text-white text-base font-semibold [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[30px] cursor-pointer hover:underline"
               aria-label="Contact us"
               whileHover={{ scale: 1.05 }}
