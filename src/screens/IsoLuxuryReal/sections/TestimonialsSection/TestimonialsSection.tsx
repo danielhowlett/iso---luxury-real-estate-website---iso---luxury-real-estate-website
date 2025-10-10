@@ -1,5 +1,3 @@
-import React from "react";
-
 interface Testimonial {
   id: number;
   name: string;
@@ -50,8 +48,8 @@ export const TestimonialsSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full py-12 lg:py-20 xl:py-24">
-      <div className="w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative w-full py-16 bg-black px-6 sm:px-8 md:px-12">
+      <div className="w-full max-w-[1520px] mx-auto">
         <h2 className="font-medium text-white text-4xl sm:text-5xl lg:text-6xl xl:text-[80px] text-center leading-tight lg:leading-[1.5] mb-12 lg:mb-16 xl:mb-20 [font-family:'Plus_Jakarta_Sans',Helvetica]">
           What Our Clients Are Saying
         </h2>

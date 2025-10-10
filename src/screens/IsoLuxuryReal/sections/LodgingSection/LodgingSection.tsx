@@ -1,5 +1,3 @@
-import React from "react";
-
 interface LodgingCardData {
   id: string;
   image: string;
@@ -41,8 +39,8 @@ const lodgingData: LodgingCardData[] = [
 
 export const LodgingSection = (): JSX.Element => {
   return (
-    <section className="relative w-full py-12 lg:py-20 xl:py-24">
-      <div className="w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative w-full py-16 bg-black px-6 sm:px-8 md:px-12">
+      <div className="w-full max-w-[1520px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-12">
           {lodgingData.map((lodging) => (
             <article
