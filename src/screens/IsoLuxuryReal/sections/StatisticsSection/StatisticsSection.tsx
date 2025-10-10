@@ -123,7 +123,7 @@ export const StatisticsSection = (): JSX.Element => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Desktop Layout - Absolute positioning matching Figma */}
         <div className="hidden lg:block relative w-full" style={{ minHeight: "533px" }}>
@@ -230,7 +230,7 @@ export const StatisticsSection = (): JSX.Element => {
               </div>
             </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
