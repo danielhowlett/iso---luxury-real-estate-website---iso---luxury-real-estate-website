@@ -1,4 +1,4 @@
-import { smoothScrollTo } from "../../utils/smoothScroll";
+import { smoothScrollTo } from "../../../../utils/smoothScroll";
 
 interface FooterLink {
   text: string;

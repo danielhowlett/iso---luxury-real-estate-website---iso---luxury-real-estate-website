@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { smoothScrollTo } from "../../utils/smoothScroll";
+import { smoothScrollTo } from "../../../../utils/smoothScroll";
 
 interface StatisticItem {
   value: string;
