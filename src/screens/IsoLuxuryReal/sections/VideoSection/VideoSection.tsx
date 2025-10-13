@@ -41,7 +41,6 @@ export const VideoSection = (): JSX.Element => {
             className="w-full h-auto rounded-2xl object-cover"
             controls
             preload="metadata"
-            poster="https://c.animaapp.com/3DzYceDx/img/video.png"
           >
             <source src="/modern-house-interior-2025-08-29-11-05-37-utc_1760044539731.mp4" type="video/mp4" />
             Your browser does not support the video tag.
