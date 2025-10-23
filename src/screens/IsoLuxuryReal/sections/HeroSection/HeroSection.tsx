@@ -145,7 +145,7 @@ export const HeroSection = (): JSX.Element => {
             transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 0.6 }}
           >
             <span className="font-medium text-[#ffffffdb] text-xs lg:text-sm xl:text-base text-center tracking-[0.3em] lg:tracking-[0.46em] [font-family:'Plus_Jakarta_Sans',Helvetica] whitespace-nowrap">
-              LUXURY REAL ESTATE
+              ROOFING & CONSTRUCTION
             </span>
           </motion.div>
 
@@ -154,7 +154,7 @@ export const HeroSection = (): JSX.Element => {
             variants={shouldReduceMotion ? {} : fadeUpVariants}
             transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 0.8 }}
           >
-            Discover Your Space. Redefined.
+            Protect. Restore. Redefine.
           </motion.h1>
 
           <motion.p 
@@ -162,11 +162,11 @@ export const HeroSection = (): JSX.Element => {
             variants={shouldReduceMotion ? {} : fadeUpVariants}
             transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 1.0 }}
           >
-            Step into a new dimension of living — where architecture meets
-            artistry and every detail is thoughtfully designed to elevate your
-            lifestyle. At Iso, we don&apos;t just offer homes — we curate
-            experiences, blending modern aesthetics with timeless elegance to
-            redefine what luxury living means.
+            Step into a higher standard of craftsmanship where structure meets
+            style and every detail is built with precision. At HC Construction,
+            we don&apos;t just build roofs, we create lasting protection that
+            blends innovation with timeless design to redefine what quality
+            construction means.
           </motion.p>
 
           <motion.div 
@@ -177,7 +177,7 @@ export const HeroSection = (): JSX.Element => {
             <motion.button
               onClick={() => smoothScrollTo('features')}
               className="bg-[#ffffff29] border-[#ffffff30] inline-flex items-center justify-center gap-2.5 px-6 lg:px-8 py-3 rounded-[10px] border border-solid backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)] cursor-pointer hover:bg-[#ffffff39] transition-all"
-              aria-label="Discover more about our luxury properties"
+              aria-label="Discover more about our construction services"
               whileHover={shouldReduceMotion ? {} : { scale: 1.05 }}
               whileTap={shouldReduceMotion ? {} : { scale: 0.95 }}
             >
