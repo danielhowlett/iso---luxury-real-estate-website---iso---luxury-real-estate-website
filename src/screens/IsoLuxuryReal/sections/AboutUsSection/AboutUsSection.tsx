@@ -62,7 +62,7 @@ export const AboutUsSection = (): JSX.Element => {
             variants={fadeUpVariants}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Crafted for the Modern Elite
+            Built for the Modern Homeowner
           </motion.h2>
 
           {/* Description */}
@@ -71,7 +71,7 @@ export const AboutUsSection = (): JSX.Element => {
             variants={fadeUpVariants}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            Designed for those who demand more than just a place to live, Iso presents a curated collection of luxury properties that reflect sophistication, innovation, and timeless elegance.
+            Designed for those who expect more than just a roof, HC Construction delivers a curated experience that combines craftsmanship, innovation, and architectural integrity to enhance every home we touch.
           </motion.p>
 
           {/* Image */}
@@ -89,7 +89,7 @@ export const AboutUsSection = (): JSX.Element => {
             variants={fadeUpVariants}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
           >
-            Design Consultation
+            DESIGN CONSULTATION
           </motion.h3>
 
           <motion.p 
@@ -97,7 +97,7 @@ export const AboutUsSection = (): JSX.Element => {
             variants={fadeUpVariants}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
           >
-            Designed for those who demand more than just a place to live, Iso presents a curated collection of luxury properties that reflect sophistication
+            Built for homeowners who demand excellence, HC Construction provides tailored roofing and exterior design solutions that merge beauty with performance.
           </motion.p>
 
           <motion.button
@@ -170,7 +170,7 @@ export const AboutUsSection = (): JSX.Element => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h2 className="text-white text-[clamp(3.5rem,5vw,5rem)] font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[1.2]">
-              Crafted for the Modern Elite
+              Built for the Modern Homeowner
             </h2>
           </motion.div>
 
@@ -181,7 +181,7 @@ export const AboutUsSection = (): JSX.Element => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
             <p className="text-[#ffffffcc] text-sm font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[26px]">
-              Designed for those who demand more than just a place to live, Iso presents a curated collection of luxury properties that reflect sophistication, innovation, and timeless elegance.
+              Designed for those who expect more than just a roof, HC Construction delivers a curated experience that combines craftsmanship, innovation, and architectural integrity to enhance every home we touch.
             </p>
           </motion.div>
 
@@ -205,7 +205,7 @@ export const AboutUsSection = (): JSX.Element => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
           >
             <h3 className="text-white text-base font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] uppercase leading-[26px]">
-              Design Consultation
+              DESIGN CONSULTATION
             </h3>
           </motion.div>
 
@@ -216,7 +216,7 @@ export const AboutUsSection = (): JSX.Element => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
           >
             <p className="text-[#ffffffcc] text-sm font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[26px]">
-              Designed for those who demand more than just a place to live, Iso presents a curated collection of luxury properties that reflect sophistication
+              Built for homeowners who demand excellence, HC Construction provides tailored roofing and exterior design solutions that merge beauty with performance.
             </p>
           </motion.div>
 
