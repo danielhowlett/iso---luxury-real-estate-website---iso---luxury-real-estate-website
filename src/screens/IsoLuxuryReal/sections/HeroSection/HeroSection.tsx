@@ -61,11 +61,12 @@ export const HeroSection = (): JSX.Element => {
   return (
     <section id="hero" className="relative w-full min-h-screen bg-colors-miscellaneous-keyboards-glyphs-primary overflow-hidden">
       <motion.img
-        className="absolute top-0 left-0 w-full h-full mix-blend-overlay object-cover"
-        alt="Luxury real estate background"
-        src="https://c.animaapp.com/3DzYceDx/img/union.png"
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        alt="HC Construction roofing project"
+        src="/hero-background.jpg"
         style={{
           y: shouldReduceMotion ? 0 : scrollY * 0.5,
+          opacity: 0.85,
         }}
       />
 
