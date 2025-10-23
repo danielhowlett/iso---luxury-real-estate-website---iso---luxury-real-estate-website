@@ -68,6 +68,9 @@ export const HeroSection = (): JSX.Element => {
           y: shouldReduceMotion ? 0 : scrollY * 0.5,
         }}
       />
+      
+      {/* Dark overlay for better text contrast */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
 
       <div className="relative w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.header 
