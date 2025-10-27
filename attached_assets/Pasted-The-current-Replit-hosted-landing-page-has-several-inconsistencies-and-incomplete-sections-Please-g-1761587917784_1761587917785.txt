@@ -1,0 +1,47 @@
+The current Replit-hosted landing page has several inconsistencies and incomplete sections. Please go through the code and correct the following:
+
+Remove irrelevant content
+
+Delete all references to “Iso” and the luxury real‑estate gallery. Those elements (e.g., the interior living‑room video/gallery section
+e869d367-cf44-4cb6-a581-05d8d45f0ac2-00-1odxawjjz0q14.picard.replit.dev
+) belong to a different template and confuse the purpose of the site.
+
+Ensure that the services listed (roofing, siding, framing, renovation) remain, but remove any random messages like “Clean, simple design reduces friction” that have no relation to roofing.
+
+Fix navigation anchors
+
+Check each navigation button (“Home”, “About”, “Features”, “Services”, “Testimonials”). Each button should link to the correct section of the page using proper anchor IDs. At the moment, the “Features” and “About” buttons either scroll to the wrong section or do nothing at all. Make sure they scroll smoothly to their intended sections.
+
+Clarify numerical indicators
+
+At the top of the page there is a “25+” indicator with a row of circles
+screenshot
+. Clarify what this represents (e.g., “25+ five‑star reviews” or “25+ years of experience”) and include a short caption so visitors understand its meaning.
+
+Complete or remove empty testimonials
+
+In the Testimonials section, one entry (Emily Ryan) has no testimonial text. Either supply a real quote or remove the placeholder entirely. Ensure all testimonials are relevant to roofing/renovation services and not to unrelated real‑estate work.
+
+Fix typos and styling
+
+Correct obvious typographical errors (e.g., “Roofng” should be “Roofing”
+e869d367-cf44-4cb6-a581-05d8d45f0ac2-00-1odxawjjz0q14.picard.replit.dev
+).
+
+Remove unnecessary line breaks and ensure text formatting is consistent across all service cards.
+
+Remove redundant or blank sections
+
+Get rid of the blank white area at the bottom of the page
+e869d367-cf44-4cb6-a581-05d8d45f0ac2-00-1odxawjjz0q14.picard.replit.dev
+ and provide a proper footer. The footer can repeat contact details, but it should be well‑structured (e.g., address, phone number, email, social links) and not leave large empty space.
+
+Simplify contact information
+
+Combine the contact information and free‑quote form into a single section. Avoid duplicating the address/phone/email multiple times, and ensure the “Get a Free Quote” button functions as expected (either sending a form submission or linking to a separate contact page).
+
+Consistency in design
+
+Ensure that icons and imagery align with the professional roofing theme. Using emoji icons may feel playful; consider replacing them with simple line icons or images that match the rest of the design.
+
+Keep color schemes, fonts and spacing consistent to convey a polished, cohesive brand.

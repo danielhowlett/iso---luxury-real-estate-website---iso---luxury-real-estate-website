@@ -6,7 +6,6 @@ import { LodgingSection } from "./sections/LodgingSection";
 import { StatisticsSection } from "./sections/StatisticsSection";
 import { SubscriptionSection } from "./sections/SubscriptionSection";
 import { TestimonialsSection } from "./sections/TestimonialsSection";
-import { VideoSection } from "./sections/VideoSection";
 
 export const IsoLuxuryReal = (): JSX.Element => {
   return (
@@ -19,7 +18,6 @@ export const IsoLuxuryReal = (): JSX.Element => {
       <AboutUsSection />
       <TestimonialsSection />
       <StatisticsSection />
-      <VideoSection />
       <SubscriptionSection />
       <FooterSection />
     </main>
