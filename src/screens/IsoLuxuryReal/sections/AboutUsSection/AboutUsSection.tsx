@@ -77,8 +77,8 @@ export const AboutUsSection = (): JSX.Element => {
           {/* Image */}
           <motion.img
             className="w-full h-auto rounded-[24px] object-cover"
-            alt="Luxury property showcase"
-            src="https://c.animaapp.com/3DzYceDx/img/image-5.png"
+            alt="HC Construction project showcase"
+            src="/about-section.jpg"
             variants={scaleInVariants}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
           />
@@ -193,8 +193,8 @@ export const AboutUsSection = (): JSX.Element => {
           >
             <img
               className="w-full h-[360px] rounded-[24px] object-cover"
-              alt="Luxury property showcase"
-              src="https://c.animaapp.com/3DzYceDx/img/image-5.png"
+              alt="HC Construction project showcase"
+              src="/about-section.jpg"
             />
           </motion.div>
 
