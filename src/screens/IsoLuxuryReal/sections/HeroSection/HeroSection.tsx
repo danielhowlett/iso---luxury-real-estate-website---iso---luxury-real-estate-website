@@ -85,13 +85,10 @@ export const HeroSection = (): JSX.Element => {
             transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut" }}
           >
             <img
-              className="w-10 h-10 lg:w-[42.95px] lg:h-[42.95px]"
-              alt="ISO Logo"
-              src="https://c.animaapp.com/3DzYceDx/img/grain-1@2x.png"
+              className="h-12 lg:h-16 w-auto brightness-110"
+              alt="HC Construction Logo"
+              src="/hc-logo.png"
             />
-            <div className="font-semibold text-white text-xl lg:text-2xl [font-family:'Plus_Jakarta_Sans',Helvetica]">
-              ISO
-            </div>
           </motion.div>
 
           <motion.nav

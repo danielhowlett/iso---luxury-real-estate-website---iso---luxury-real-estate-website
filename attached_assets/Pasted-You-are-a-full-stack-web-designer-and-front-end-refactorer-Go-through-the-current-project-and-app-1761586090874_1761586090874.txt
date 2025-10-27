@@ -1,0 +1,95 @@
+You are a full-stack web designer and front-end refactorer.  
+Go through the current project and apply the following comprehensive visual and content fixes to improve the HC Construction site (originally an Anima “ISO” real estate template):
+
+---
+
+### 1️⃣ BRANDING & TEXT UPDATES
+- Replace all mentions of “ISO” or “Iso” with **“HC Construction”**.  
+- Update tagline:
+  - Old: “Roofing & Construction / Protect. Restore. Redefine.”
+  - Keep this, but ensure consistent typography and spacing.
+- Replace all property names (“Horizon Villa,” “Aria Residence,” “Solana Estate”) with realistic construction projects like:
+  - “Franklin Residence — Nashville, TN | Full Roof Replacement”
+  - “Oak Hill Estate — Brentwood, TN | Custom Remodel”
+  - “Riverbend Home — Franklin, TN | New Build”
+- Replace “Luxury Real Estate” phrases with “Premium Roofing & Remodeling”.
+- Update footer to:  
+  “© 2025 HC Construction. All Rights Reserved.”  
+  Email: info@hcconstructioninc.com  
+  Phone: (615) 555-2134  
+  Address: Nashville, TN  
+
+---
+
+### 2️⃣ COLOR PALETTE & TYPOGRAPHY
+- Replace soft grays/greens with a strong **slate gray (#2E2E2E)** base, **off-white (#F8F8F8)** background, and **copper accent (#C7853B)**.  
+- Ensure buttons use the copper accent color with white text and smooth hover fade.  
+- Use clean sans-serif fonts:
+  - Headings: `Poppins, 600`
+  - Body: `Inter, 400`
+
+---
+
+### 3️⃣ HEADER & NAVIGATION
+- Replace dot “ISO” logo with HC Construction logo or placeholder “HC”.
+- Even out navigation spacing and add hover underline animation.
+- Remove tiny arrow icons between nav items.
+- Add sticky header with shadow on scroll.
+
+---
+
+### 4️⃣ HERO SECTION
+- Add subtle dark overlay gradient (linear-gradient rgba(0,0,0,0.5) → rgba(0,0,0,0.1)) over hero background for better text contrast.
+- Center-align hero text vertically with balanced padding on mobile.
+- Make “Discover More” button solid copper color and larger (border-radius: 9999px).
+
+---
+
+### 5️⃣ PROJECT CARDS SECTION
+- Use a clean 3-column responsive grid.
+- Each card includes: image, title, location, description, and “View Project” button.
+- Add uniform drop-shadow and hover lift effect (transform: translateY(-4px)).
+
+---
+
+### 6️⃣ TESTIMONIALS
+- Update quotes to sound like roofing clients (no “Bali/Jakarta/London”).
+  Example:
+  - “They replaced our entire roof and handled insurance perfectly.”
+  - “Our remodel turned out better than we imagined — professional and on time.”
+- Fix spacing/alignment and center testimonials in a carousel layout.
+
+---
+
+### 7️⃣ MOBILE RESPONSIVENESS
+- Fix stacked text and overlapping buttons on small screens.
+- Use `clamp()` for text scaling and adjust padding for mobile readability.
+- Ensure hero image, cards, and testimonial images scale evenly.
+
+---
+
+### 8️⃣ FOOTER & CONTACT SECTION
+- Simplify layout to: logo, navigation links, contact info, and social icons.
+- Use icons in copper color with hover effects.
+- Replace old “Jakarta” address and ensure consistent spacing.
+
+---
+
+### 9️⃣ PERFORMANCE CLEANUP
+- Remove duplicated sections (the “Modern Homes” block appears twice).
+- Delete fitness/statistic sections (“92% users finish…”).
+- Compress and optimize images for faster load times.
+- Ensure semantic HTML and accessible alt text (roofing project names).
+
+---
+
+### 10️⃣ ADDITIONAL POLISH
+- Add subtle fade-in animations on scroll (using AOS or CSS keyframes).
+- Smooth scroll for navigation links.
+- Ensure favicon and metadata reflect HC Construction branding.
+
+---
+
+Final goal:  
+The site should feel **premium, trustworthy, and construction-focused** — similar polish to a high-end builder brand.  
+Keep animations subtle, colors earthy, and layout consistent across breakpoints.
