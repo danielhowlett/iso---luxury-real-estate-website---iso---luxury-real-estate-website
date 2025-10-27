@@ -76,6 +76,41 @@ The Vite config has been customized for Replit:
 
 ## Recent Changes
 
+### October 27, 2025 - Content Cleanup & Professional Polish
+**Removed Irrelevant Content:**
+- Removed VideoSection (luxury real estate interior gallery) from page structure
+- Eliminated all "Iso" and luxury real estate references throughout the site
+
+**Statistics Section Overhaul:**
+- Replaced generic fitness app metrics with HC Construction-specific stats:
+  - "13+ Years serving Nashville & Springfield"
+  - "500+ Projects completed with excellence"
+  - "100% Licensed, insured & veteran-owned"
+  - "10% Discount for military, police & firefighters"
+- Updated heading to "Built on Experience. Backed by Results."
+- Replaced description with HC Construction-focused copy
+
+**Testimonials Update:**
+- Replaced all 4 testimonials with construction/roofing-specific reviews
+- Updated client names and locations to Tennessee area (Nashville, Springfield, Goodlettsville, White House)
+- Removed luxury real estate references and replaced with roofing, siding, framing, and renovation feedback
+
+**Hero Section Improvements:**
+- Added caption "Five-Star Reviews" below the "25+" indicator for clarity
+- Now visitors understand the "25+" represents customer reviews
+
+**Design Consistency:**
+- Replaced emoji service icons (🏠🔨📐✨) with professional SVG line icons
+- All service cards now use clean, minimalist line icons that match the overall design aesthetic
+
+**Navigation Verification:**
+- Confirmed all navigation buttons correctly link to their intended sections
+- Home → Hero section
+- About → Why Choose HC Construction
+- Features → Services (4 cards)
+- Services → Statistics/Experience section
+- Testimonials → Client testimonials
+
 ### October 27, 2025 - Complete HC Construction Rebrand
 **Hero Section:**
 - Updated heading to "Serving the Nashville Area Since 2012"
