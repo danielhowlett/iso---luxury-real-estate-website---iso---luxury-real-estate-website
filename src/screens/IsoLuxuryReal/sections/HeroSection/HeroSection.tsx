@@ -211,8 +211,13 @@ export const HeroSection = (): JSX.Element => {
                   />
                 ))}
               </div>
-              <div className="font-medium text-lg lg:text-xl text-white [font-family:'Plus_Jakarta_Sans',Helvetica]">
-                25+
+              <div className="flex flex-col gap-1">
+                <div className="font-medium text-lg lg:text-xl text-white [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                  25+
+                </div>
+                <div className="font-medium text-xs lg:text-sm text-[#ffffffa1] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                  Five-Star Reviews
+                </div>
               </div>
             </motion.div>
           </motion.div>

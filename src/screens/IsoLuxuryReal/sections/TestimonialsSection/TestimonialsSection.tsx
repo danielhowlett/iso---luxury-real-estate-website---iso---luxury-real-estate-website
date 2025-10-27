@@ -25,11 +25,6 @@ const slideInRightVariants = {
   visible: { opacity: 1, x: 0 }
 };
 
-const scaleInVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1 }
-};
-
 const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
@@ -45,39 +40,39 @@ export const TestimonialsSection = (): JSX.Element => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: "Daniel Hubner",
-      location: "Bali",
+      name: "Michael Thompson",
+      location: "Nashville, TN",
       quote:
-        "Iso exceeded every expectation. From the first viewing to the final signature, the process was smooth, professional, and tailored.",
+        "HC Construction replaced our entire roof last summer. Their crew was professional, efficient, and left the property spotless. The quality of work exceeded our expectations, and we've had zero issues since.",
       image: "https://c.animaapp.com/3DzYceDx/img/image-1@2x.png",
-      imageAlt: "Daniel Hubner testimonial",
+      imageAlt: "Michael Thompson testimonial",
     },
     {
       id: 2,
-      name: "Leonard Kai",
-      location: "Singapore",
+      name: "Jennifer Collins",
+      location: "Springfield, TN",
       quote:
-        "I've worked with agencies globally, but Iso stands apart with their attention to detail and deep understanding of architectural value.",
+        "From the initial estimate to final cleanup, HC Construction was outstanding. They helped us navigate insurance claims and delivered a beautiful new siding installation. Highly recommend for any exterior project.",
       image: "https://c.animaapp.com/3DzYceDx/img/image-3@2x.png",
-      imageAlt: "Leonard Kai testimonial",
+      imageAlt: "Jennifer Collins testimonial",
     },
     {
       id: 3,
-      name: "Sarah Luser",
-      location: "Jakarta",
+      name: "Robert Martinez",
+      location: "Goodlettsville, TN",
       quote:
-        "The team at Iso has a sharp eye for quality and design. They matched my vision perfectly and delivered a property that feels like it was made for me.",
+        "As a veteran myself, I appreciated working with a veteran-owned business. They framed our garage addition with precision and professionalism. The attention to detail was impressive throughout the entire project.",
       image: "https://c.animaapp.com/3DzYceDx/img/image-2@2x.png",
-      imageAlt: "Sarah Luser testimonial",
+      imageAlt: "Robert Martinez testimonial",
     },
     {
       id: 4,
-      name: "Emily Ryan",
-      location: "London",
+      name: "Sarah Williams",
+      location: "White House, TN",
       quote:
-        "From private viewings to interior consultation, Iso offered more than just a sale — they offered an experience.",
+        "Our home renovation was a big undertaking, but HC Construction made it stress-free. They communicated clearly, stayed on schedule, and transformed our space beyond what we imagined. Worth every penny!",
       image: "https://c.animaapp.com/3DzYceDx/img/image-4@2x.png",
-      imageAlt: "Emily Ryan testimonial",
+      imageAlt: "Sarah Williams testimonial",
     },
   ];
 

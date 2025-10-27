@@ -41,20 +41,20 @@ const staggerContainer = {
 export const StatisticsSection = (): JSX.Element => {
   const statisticsData: StatisticItem[] = [
     {
-      value: "92%",
-      description: "Users finish their weekly training cycles",
+      value: "13+",
+      description: "Years serving Nashville & Springfield",
     },
     {
-      value: "4.9",
-      description: "Backed by thousands of reviews",
+      value: "500+",
+      description: "Projects completed with excellence",
     },
     {
-      value: "3X",
-      description: "Clean, simple design reduces friction",
+      value: "100%",
+      description: "Licensed, insured & veteran-owned",
     },
     {
-      value: "80%",
-      description: "Most users complete a workout",
+      value: "10%",
+      description: "Discount for military, police & firefighters",
     },
   ];
 
@@ -71,26 +71,27 @@ export const StatisticsSection = (): JSX.Element => {
         >
           {/* Title */}
           <h2 className="text-white text-3xl sm:text-4xl font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-tight">
-            Modern Homes. Timeless Elegance.
+            Built on Experience. Backed by Results.
           </h2>
 
           {/* Image */}
           <img
             className="w-full max-w-[280px] h-auto rounded-[24px] object-cover"
-            alt="Modern luxury home interior"
-            src="https://c.animaapp.com/3DzYceDx/img/image@2x.png"
+            alt="HC Construction project"
+            src="/about-section.jpg"
           />
 
           {/* Description */}
           <p className="text-[#ffffffcc] text-sm font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[26px]">
-            At Iso, we bring together contemporary design and classic sophistication to create homes that stand the test of time.
+            At HC Construction, we combine years of expertise with honest workmanship to deliver roofing, siding, framing, and renovation services you can trust.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-wrap items-center gap-4 mb-6">
             <button
+              onClick={() => smoothScrollTo('about')}
               className="bg-[#ffffff0f] border border-[#ffffff12] rounded-[8px] px-6 py-2.5 backdrop-blur-[40px] hover:bg-[#ffffff15] transition-all cursor-pointer"
-              aria-label="Learn more about Iso luxury real estate"
+              aria-label="Learn more about HC Construction"
             >
               <span className="text-white text-sm font-medium [font-family:'Poppins',Helvetica] leading-[26px]">
                 Learn More
@@ -102,7 +103,7 @@ export const StatisticsSection = (): JSX.Element => {
               className="text-white text-sm font-semibold [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[26px] cursor-pointer hover:underline"
               aria-label="Contact us"
             >
-              Contact Us
+              Get a Free Quote
             </button>
           </div>
 
@@ -135,8 +136,8 @@ export const StatisticsSection = (): JSX.Element => {
             variants={slideInLeftVariants}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-white text-[80px] font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[120px]">
-              Modern Homes. Timeless Elegance.
+            <h2 className="text-white text-[72px] font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[100px]">
+              Built on Experience. Backed by Results.
             </h2>
           </motion.div>
 
@@ -148,8 +149,8 @@ export const StatisticsSection = (): JSX.Element => {
           >
             <img
               className="w-[279px] h-[244px] rounded-[30px] object-cover"
-              alt="Modern luxury home interior"
-              src="https://c.animaapp.com/3DzYceDx/img/image@2x.png"
+              alt="HC Construction project"
+              src="/about-section.jpg"
             />
           </motion.div>
 
@@ -160,7 +161,7 @@ export const StatisticsSection = (): JSX.Element => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
           >
             <p className="text-[#ffffffcc] text-base font-medium [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[30px]">
-              At Iso, we bring together contemporary design and classic sophistication to create homes that stand the test of time.
+              At HC Construction, we combine years of expertise with honest workmanship to deliver roofing, siding, framing, and renovation services you can trust.
             </p>
           </motion.div>
 
@@ -171,8 +172,9 @@ export const StatisticsSection = (): JSX.Element => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
           >
             <motion.button
+              onClick={() => smoothScrollTo('about')}
               className="bg-[#ffffff0f] border border-[#ffffff12] rounded-[10px] px-[30px] py-3 backdrop-blur-[40px] hover:bg-[#ffffff15] transition-all cursor-pointer"
-              aria-label="Learn more about Iso luxury real estate"
+              aria-label="Learn more about HC Construction"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -184,18 +186,18 @@ export const StatisticsSection = (): JSX.Element => {
 
           {/* Contact Us Link */}
           <motion.div 
-            className="absolute top-[462px] left-[540px]"
+            className="absolute top-[462px] left-[526px]"
             variants={scaleInVariants}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
           >
             <motion.button
               onClick={() => smoothScrollTo('contact')}
               className="text-white text-base font-semibold [font-family:'Plus_Jakarta_Sans',Helvetica] leading-[30px] cursor-pointer hover:underline"
-              aria-label="Contact us"
+              aria-label="Get a free quote"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Contact Us
+              Get a Free Quote
             </motion.button>
           </motion.div>
 
