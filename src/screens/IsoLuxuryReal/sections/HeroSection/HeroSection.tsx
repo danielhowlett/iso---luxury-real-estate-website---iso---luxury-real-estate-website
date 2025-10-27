@@ -154,7 +154,7 @@ export const HeroSection = (): JSX.Element => {
             variants={shouldReduceMotion ? {} : fadeUpVariants}
             transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 0.8 }}
           >
-            Protect. Restore. Redefine.
+            Serving the Nashville Area Since 2012
           </motion.h1>
 
           <motion.p 
@@ -162,11 +162,7 @@ export const HeroSection = (): JSX.Element => {
             variants={shouldReduceMotion ? {} : fadeUpVariants}
             transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 1.0 }}
           >
-            Step into a higher standard of craftsmanship where structure meets
-            style and every detail is built with precision. At HC Construction,
-            we don&apos;t just build roofs, we create lasting protection that
-            blends innovation with timeless design to redefine what quality
-            construction means.
+            Protecting & transforming homes with premium craftsmanship and dependable service.
           </motion.p>
 
           <motion.div 
@@ -175,9 +171,9 @@ export const HeroSection = (): JSX.Element => {
             transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 1.2 }}
           >
             <motion.button
-              onClick={() => smoothScrollTo('features')}
+              onClick={() => smoothScrollTo('contact')}
               className="bg-[#ffffff29] border-[#ffffff30] inline-flex items-center justify-center gap-2.5 px-6 lg:px-8 py-3 rounded-[10px] border border-solid backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)] cursor-pointer hover:bg-[#ffffff39] transition-all"
-              aria-label="Discover more about our construction services"
+              aria-label="Get your free quote"
               whileHover={shouldReduceMotion ? {} : { scale: 1.05 }}
               whileTap={shouldReduceMotion ? {} : { scale: 0.95 }}
             >
@@ -188,7 +184,7 @@ export const HeroSection = (): JSX.Element => {
                 aria-hidden="true"
               />
               <span className="text-white text-center font-medium text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] whitespace-nowrap">
-                Discover More
+                Get Your Free Quote
               </span>
             </motion.button>
 

@@ -1,0 +1,96 @@
+You are a front-end web refactor assistant working inside a Replit project for HC Construction.
+
+Your task: Replace the current placeholder content (from the “ISO / Luxury Real Estate” template) with the updated HC Construction homepage content below, while preserving the site’s layout, animations, color scheme, and button styles. Do not remove existing CSS classes or structure — only replace the text, images, and buttons where applicable.
+
+---
+
+## HERO SECTION
+Replace current hero text with:
+Heading (large): “Serving the Nashville Area Since 2012”
+Subheading (medium): “Protecting & transforming homes with premium craftsmanship and dependable service.”
+Button: “Get Your Free Quote” → scrolls to contact form or quote section.
+
+---
+
+## WHY CHOOSE HC CONSTRUCTION SECTION
+Replace the “Built for the Modern Homeowner” or equivalent section with a new content block titled:
+**“Why Choose HC Construction?”**
+Under it, use bullet-style or paragraph blurbs for:
+- Veteran-owned & operated – we understand commitment, precision and respect for your home.
+- Licensed, insured and local to Springfield/Nashville — your project is handled by a team that knows the region.
+- Free inspections & detailed estimates — transparent pricing with no surprises.
+- Complete cleanup and attention to detail — we leave your job site cleaner than when we arrived.
+- Exclusive 10% discount for military personnel, police officers and firefighters — it’s our way of saying thanks.
+- Extensive experience across roofing, siding, framing and full-scale remodeling — one trusted team for all your needs.
+
+Add subtle icons beside each bullet (e.g., shield, checkmark, hammer).
+
+---
+
+## SERVICES SECTION
+Replace any “Properties” or “Luxury Homes” sections with the following 4 cards:
+
+### Roofing
+Text: “Elevate your home’s protection and curb appeal with our premium roofing solutions. From durable shingles to high-performance systems, we ensure your investment stands the test of time.”
+Button: “Get a Roofing Quote”
+
+### Siding
+Text: “Enhance and safeguard your exterior with quality siding installations. Choose from modern materials and expert installation to boost both aesthetics and longevity.”
+Button: “Get a Siding Quote”
+
+### Framing
+Text: “Build the foundation of your project with confidence. Our professional framing services deliver structural integrity, precision workmanship and peace of mind.”
+Button: “Learn More – Framing”
+
+### Renovation
+Text: “Dreaming of a transformation? We redesign and remodel residential interiors and exteriors — delivering luxury finishes, smart upgrades and turnkey results that exceed expectations.”
+Button: “Let’s Talk Renovation”
+
+Ensure cards use consistent layout and hover effects from existing property cards.
+
+---
+
+## RECENT WORK SECTION
+Replace any “Gallery” or “Portfolio” section with:
+Heading: “Recent Work”
+Subtext: “Take a look through our project gallery to see how we’ve elevated homes across the region. Each image represents our dedication to quality, craftsmanship and client satisfaction.”
+Button: “View Full Gallery”
+
+Use existing card/gallery layout for images.
+
+---
+
+## CONTACT SECTION
+Replace old contact info (“Jakarta” or “info@isorealestate.com”) with:
+**Residential Location:** 245 Elder Drive, Springfield, TN 37172  
+**Phone:** (615) 766-6180  
+**Email:** reylopez21@icloud.com  
+**Hours:**  
+- Monday–Friday: 9 AM – 6 PM  
+- Saturday–Sunday: 9 AM – 12 PM  
+Button: “Get a Free Quote”
+
+Ensure contact form or button scrolls to quote section or opens mailto link.
+
+---
+
+## FOOTER SECTION
+Replace entire footer text with:
+“© 2012 – 2025 HC Construction Inc. – All Rights Reserved”  
+“Built with pride in Tennessee. Powered by premium craftsmanship and dedicated service.”  
+Add placeholders for social icons (Facebook, Instagram, LinkedIn).  
+Small subtext: “Veteran-owned | Licensed & Insured.”
+
+---
+
+## GENERAL NOTES
+- Preserve all button styling, spacing, and animations from the existing design.
+- Ensure new headings inherit the same typography styles (H1/H2/H3).
+- Maintain the site’s visual hierarchy and image proportions.
+- Remove all references to “Iso”, “Luxury Real Estate”, and irrelevant text like “Horizon Villa”, “Bali”, or “Aria Residence”.
+- Keep hero background image and replace alt text with “HC Construction Nashville Roofing Project”.
+- Make sure all sections remain fully responsive on mobile and tablet.
+
+When finished, show a confirmation message:  
+✅ “Homepage content successfully replaced with HC Construction copy and layout preserved.”
+
