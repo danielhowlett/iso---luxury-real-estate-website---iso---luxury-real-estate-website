@@ -12,17 +12,6 @@ const scaleInVariants = {
   visible: { opacity: 1, scale: 1 }
 };
 
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.1
-    }
-  }
-};
-
 export const VideoSection = (): JSX.Element => {
   return (
     <section id="video" className="relative w-full py-20 md:py-24 bg-black px-6 sm:px-8 md:px-12 lg:px-20">
