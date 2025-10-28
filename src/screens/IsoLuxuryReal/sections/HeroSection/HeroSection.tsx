@@ -1,30 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useMotionSafe } from "../../../../hooks/useMotionSafe";
 import { smoothScrollTo } from "../../../../utils/smoothScroll";
-
-const navigationItems = [
-  { label: "Home", sectionId: "hero", active: true },
-  { label: "About", sectionId: "about", active: false },
-  { label: "Features", sectionId: "features", active: false },
-  { label: "Services", sectionId: "services", active: false },
-  { label: "Testimonials", sectionId: "testimonials", active: false },
-];
 
 // Animation variants
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 60 },
   visible: { opacity: 1, y: 0 }
-};
-
-const slideInLeftVariants = {
-  hidden: { opacity: 0, x: -60 },
-  visible: { opacity: 1, x: 0 }
-};
-
-const slideInRightVariants = {
-  hidden: { opacity: 0, x: 60 },
-  visible: { opacity: 1, x: 0 }
 };
 
 const scaleInVariants = {
@@ -72,14 +54,14 @@ export const HeroSection = (): JSX.Element => {
 
       <div className="relative w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.header 
-          className="flex flex-col lg:flex-row items-center justify-between pt-2 pb-6 lg:pt-4 lg:pb-10 gap-6"
+          className="flex flex-col items-center justify-center pt-2 pb-6 lg:pt-4 lg:pb-10 gap-6"
           initial={shouldReduceMotion ? false : "hidden"}
           animate={shouldReduceMotion ? false : "visible"}
           variants={shouldReduceMotion ? {} : staggerContainer}
         >
           <motion.div 
             className="flex items-center gap-3.5"
-            variants={shouldReduceMotion ? {} : slideInLeftVariants}
+            variants={shouldReduceMotion ? {} : fadeUpVariants}
             transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut" }}
           >
             <img
@@ -89,45 +71,14 @@ export const HeroSection = (): JSX.Element => {
             />
           </motion.div>
 
-          <motion.nav
-            className="hidden lg:flex items-center gap-8 xl:gap-12"
-            aria-label="Main navigation"
+          <motion.div 
+            className="inline-flex items-center justify-center gap-2.5 px-5 lg:px-6 py-2 rounded-full border border-solid border-[#ffffff4f]"
             variants={shouldReduceMotion ? {} : fadeUpVariants}
             transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            {navigationItems.map((item, index) => (
-              <React.Fragment key={item.label}>
-                <button
-                  onClick={() => smoothScrollTo(item.sectionId)}
-                  className={`font-medium text-sm xl:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] whitespace-nowrap cursor-pointer hover:text-white transition-colors ${
-                    item.active ? "text-white" : "text-[#ffffffcc]"
-                  }`}
-                  aria-label={`Navigate to ${item.label}`}
-                >
-                  {item.label}
-                </button>
-                {index < navigationItems.length - 1 && (
-                  <img
-                    className="w-4 h-4"
-                    alt=""
-                    src="https://c.animaapp.com/3DzYceDx/img/icon-3@2x.png"
-                    aria-hidden="true"
-                  />
-                )}
-              </React.Fragment>
-            ))}
-          </motion.nav>
-
-          <motion.div 
-            className="hidden lg:block"
-            variants={shouldReduceMotion ? {} : slideInRightVariants}
-            transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 0.4 }}
-          >
-            <img
-              className="w-[140px] xl:w-[171.24px] h-auto"
-              alt="Social media icons"
-              src="https://c.animaapp.com/3DzYceDx/img/icons@2x.png"
-            />
+            <span className="font-medium text-[#ffffffdb] text-xs lg:text-sm xl:text-base text-center tracking-[0.3em] lg:tracking-[0.46em] [font-family:'Plus_Jakarta_Sans',Helvetica] whitespace-nowrap">
+              ROOFING & CONSTRUCTION
+            </span>
           </motion.div>
         </motion.header>
 
@@ -137,15 +88,6 @@ export const HeroSection = (): JSX.Element => {
           animate={shouldReduceMotion ? false : "visible"}
           variants={shouldReduceMotion ? {} : staggerContainer}
         >
-          <motion.div 
-            className="inline-flex items-center justify-center gap-2.5 px-5 lg:px-6 py-2 rounded-full border border-solid border-[#ffffff4f]"
-            variants={shouldReduceMotion ? {} : fadeUpVariants}
-            transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 0.6 }}
-          >
-            <span className="font-medium text-[#ffffffdb] text-xs lg:text-sm xl:text-base text-center tracking-[0.3em] lg:tracking-[0.46em] [font-family:'Plus_Jakarta_Sans',Helvetica] whitespace-nowrap">
-              ROOFING & CONSTRUCTION
-            </span>
-          </motion.div>
 
           <motion.h1 
             className="w-full max-w-[90%] lg:max-w-[1040px] font-medium text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center leading-tight lg:leading-[1.35] [font-family:'Plus_Jakarta_Sans',Helvetica]"

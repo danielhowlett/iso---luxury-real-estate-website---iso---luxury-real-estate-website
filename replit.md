@@ -82,6 +82,13 @@ The Vite config has been customized for Replit:
 - Centered the "Get Your Free Quote" button for better visual hierarchy
 - "25+ Five-Star Reviews" text now displays cleanly below the button
 
+**Header Redesign:**
+- Removed navigation menu (Home, About, Features, Services, Testimonials)
+- Removed social media icons from header
+- Logo now centered at the top of the page
+- "ROOFING & CONSTRUCTION" badge moved below the logo for better visual flow
+- Creates a cleaner, more focused brand presentation
+
 **Contact Section Simplification:**
 - Removed contact form box for streamlined presentation
 - Centered contact information card with all essential details
