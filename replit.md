@@ -76,6 +76,22 @@ The Vite config has been customized for Replit:
 
 ## Recent Changes
 
+### October 28, 2025 - UI Refinements & Simplification
+**Hero Section Updates:**
+- Removed avatar circles from "25+ Five-Star Reviews" indicator
+- Centered the "Get Your Free Quote" button for better visual hierarchy
+- "25+ Five-Star Reviews" text now displays cleanly below the button
+
+**Contact Section Simplification:**
+- Removed contact form box for streamlined presentation
+- Centered contact information card with all essential details
+- Kept: address, phone, email, and business hours in a clean, single-column layout
+
+**Logo Visibility Improvements:**
+- Increased logo size in hero header from h-12 to h-16 (mobile) and h-16 to h-24 (desktop)
+- Increased logo size in footer from h-12 to h-16 for better brand visibility
+- Logo is now much more prominent and easier to see throughout the site
+
 ### October 27, 2025 - Content Cleanup & Professional Polish
 **Removed Irrelevant Content:**
 - Removed VideoSection (luxury real estate interior gallery) from page structure
