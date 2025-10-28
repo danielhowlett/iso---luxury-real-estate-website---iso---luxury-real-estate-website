@@ -83,7 +83,7 @@ export const HeroSection = (): JSX.Element => {
             transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut" }}
           >
             <img
-              className="h-16 lg:h-24 w-auto brightness-110"
+              className="h-48 lg:h-72 w-auto brightness-110"
               alt="HC Construction Logo"
               src="/hc-logo.png"
             />
