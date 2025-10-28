@@ -14,7 +14,6 @@ This is a professional construction company website for HC Construction, a veter
 - **Styling:** Tailwind CSS 3.4.16 with custom animations
 - **Routing:** React Router DOM 6.8.1
 - **Animations:** Framer Motion for smooth scroll animations
-- **Development:** Anima Vite Plugin for screen graph generation
 
 ### Project Structure
 ```
@@ -76,6 +75,16 @@ The Vite config has been customized for Replit:
 - `npm run build` - Build for production
 
 ## Recent Changes
+
+### October 28, 2025 - Complete Anima Branding Removal
+**Removed all Anima references and scripts:**
+- Updated HTML title from "Anima Project" to "HC Construction - Nashville & Springfield Roofing Experts"
+- Updated package.json name from "anima-project" to "hc-construction-website"
+- Removed @animaapp/vite-plugin-screen-graph package and all references
+- Updated vite.config.ts to remove Anima screen graph plugin
+- Replaced Anima CDN button icon with inline SVG chevron icon
+- Completely rewrote README.md with HC Construction branding
+- Note: Testimonial section currently uses placeholder portrait images from external CDN - these can be replaced with actual client photos later
 
 ### October 28, 2025 - UI Refinements, Badge Repositioning & Image Updates
 **Hero Section Updates:**

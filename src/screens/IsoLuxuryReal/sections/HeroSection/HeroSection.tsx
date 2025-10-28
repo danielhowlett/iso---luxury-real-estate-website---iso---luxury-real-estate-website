@@ -117,12 +117,15 @@ export const HeroSection = (): JSX.Element => {
               whileHover={shouldReduceMotion ? {} : { scale: 1.05 }}
               whileTap={shouldReduceMotion ? {} : { scale: 0.95 }}
             >
-              <img
-                className="w-5 h-5 lg:w-6 lg:h-6"
-                alt=""
-                src="https://c.animaapp.com/3DzYceDx/img/chip-extraction@2x.png"
+              <svg 
+                className="w-5 h-5 lg:w-6 lg:h-6" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
                 aria-hidden="true"
-              />
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
               <span className="text-white text-center font-medium text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] whitespace-nowrap">
                 Get Your Free Quote
               </span>
