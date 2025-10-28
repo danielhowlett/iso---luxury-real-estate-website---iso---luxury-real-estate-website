@@ -72,7 +72,7 @@ export const HeroSection = (): JSX.Element => {
 
       <div className="relative w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.header 
-          className="flex flex-col lg:flex-row items-center justify-between py-6 lg:py-10 gap-6"
+          className="flex flex-col lg:flex-row items-center justify-between pt-2 pb-6 lg:pt-4 lg:pb-10 gap-6"
           initial={shouldReduceMotion ? false : "hidden"}
           animate={shouldReduceMotion ? false : "visible"}
           variants={shouldReduceMotion ? {} : staggerContainer}
