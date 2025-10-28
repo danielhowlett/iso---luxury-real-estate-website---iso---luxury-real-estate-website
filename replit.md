@@ -96,6 +96,10 @@ The Vite config has been customized for Replit:
 - Updated "Why Choose HC Construction" section image to new construction site aerial photo
 - Updated "Built on Experience. Backed by Results." section image to mansion construction photo
 
+**Testimonials Section Mobile Optimization:**
+- Fixed portrait photo cropping issue on mobile - added `object-top` positioning to prevent heads from being cut off
+- Photos now anchor from the top, ensuring faces are always visible and properly framed
+
 **Contact Section Simplification:**
 - Removed contact form box for streamlined presentation
 - Centered contact information card with all essential details

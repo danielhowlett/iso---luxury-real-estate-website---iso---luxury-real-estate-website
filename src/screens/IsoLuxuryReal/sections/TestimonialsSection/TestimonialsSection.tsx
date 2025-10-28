@@ -106,7 +106,7 @@ export const TestimonialsSection = (): JSX.Element => {
               whileHover={{ scale: 1.02, y: -5 }}
             >
               <motion.img
-                className="w-full sm:w-32 lg:w-40 xl:w-48 h-48 sm:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl flex-shrink-0"
+                className="w-full sm:w-32 lg:w-40 xl:w-48 h-48 sm:h-32 lg:h-40 xl:h-48 object-cover object-top rounded-2xl flex-shrink-0"
                 alt={testimonial.imageAlt}
                 src={testimonial.image}
                 initial={{ scale: 0.8, opacity: 0 }}
