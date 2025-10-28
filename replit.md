@@ -84,6 +84,7 @@ The Vite config has been customized for Replit:
 - "25+ Five-Star Reviews" text now displays cleanly below the button
 - **"ROOFING & CONSTRUCTION" badge repositioned** - now appears BELOW the main heading "Serving the Nashville Area Since 2012" instead of above the logo
 - Creates better visual flow: Logo → Heading → Badge → Subheading
+- **Hero section vertical positioning optimized** - content positioned at top of viewport so logo appears above the house in background image, ensuring maximum readability against trees/sky
 
 **Header Redesign:**
 - Removed navigation menu (Home, About, Features, Services, Testimonials)

@@ -52,9 +52,9 @@ export const HeroSection = (): JSX.Element => {
       {/* Dark overlay for better text contrast */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
 
-      <div className="relative w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-center">
+      <div className="relative w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-start pt-4 lg:pt-6">
         <motion.header 
-          className="flex flex-col items-center justify-center pt-8 pb-6 lg:pt-12 lg:pb-8"
+          className="flex flex-col items-center justify-center pb-3 lg:pb-4"
           initial={shouldReduceMotion ? false : "hidden"}
           animate={shouldReduceMotion ? false : "visible"}
           variants={shouldReduceMotion ? {} : staggerContainer}
