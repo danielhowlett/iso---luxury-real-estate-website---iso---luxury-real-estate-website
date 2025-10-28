@@ -15,25 +15,9 @@ const fadeUpVariants = {
   visible: { opacity: 1, y: 0 }
 };
 
-const slideInLeftVariants = {
-  hidden: { opacity: 0, x: -60 },
-  visible: { opacity: 1, x: 0 }
-};
-
-const slideInRightVariants = {
+const slideInVariants = {
   hidden: { opacity: 0, x: 60 },
   visible: { opacity: 1, x: 0 }
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.1
-    }
-  }
 };
 
 export const TestimonialsSection = (): JSX.Element => {
@@ -53,7 +37,7 @@ export const TestimonialsSection = (): JSX.Element => {
       location: "Springfield, TN",
       quote:
         "From the initial estimate to final cleanup, HC Construction was outstanding. They helped us navigate insurance claims and delivered a beautiful new siding installation. Highly recommend for any exterior project.",
-      image: "https://c.animaapp.com/3DzYceDx/img/image-3@2x.png",
+      image: "https://c.animaapp.com/3DzYceDx/img/image-2@2x.png",
       imageAlt: "Jennifer Collins testimonial",
     },
     {
@@ -62,7 +46,7 @@ export const TestimonialsSection = (): JSX.Element => {
       location: "Goodlettsville, TN",
       quote:
         "As a veteran myself, I appreciated working with a veteran-owned business. They framed our garage addition with precision and professionalism. The attention to detail was impressive throughout the entire project.",
-      image: "https://c.animaapp.com/3DzYceDx/img/image-2@2x.png",
+      image: "https://c.animaapp.com/3DzYceDx/img/image-3@2x.png",
       imageAlt: "Robert Martinez testimonial",
     },
     {
@@ -77,10 +61,10 @@ export const TestimonialsSection = (): JSX.Element => {
   ];
 
   return (
-    <section id="testimonials" className="relative w-full py-20 md:py-24 bg-black px-8 sm:px-12 md:px-20 lg:px-32">
-      <div className="w-full max-w-[1440px] mx-auto">
+    <section id="testimonials" className="relative w-full py-20 md:py-24 bg-black overflow-hidden">
+      <div className="w-full max-w-[1440px] mx-auto px-8 sm:px-12 md:px-20 lg:px-32">
         <motion.h2 
-          className="font-medium text-white text-3xl sm:text-4xl lg:text-[clamp(3rem,4vw,4rem)] text-center leading-tight lg:leading-[1.3] mb-12 lg:mb-16 [font-family:'Plus_Jakarta_Sans',Helvetica]"
+          className="font-medium text-white text-3xl sm:text-4xl lg:text-[clamp(3rem,4vw,4rem)] text-center leading-tight lg:leading-[1.3] mb-8 lg:mb-12 [font-family:'Plus_Jakarta_Sans',Helvetica]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -89,33 +73,54 @@ export const TestimonialsSection = (): JSX.Element => {
         >
           What Our Clients Are Saying
         </motion.h2>
+      </div>
 
+      {/* Horizontal Scroll Container */}
+      <div className="relative">
         <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8"
+          className="flex gap-6 overflow-x-auto pb-6 px-8 sm:px-12 md:px-20 lg:px-32 snap-x snap-mandatory scrollbar-hide"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={staggerContainer}
+          viewport={{ once: true, amount: 0.1 }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.15,
+                delayChildren: 0.2
+              }
+            }
+          }}
+          style={{
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+            WebkitOverflowScrolling: 'touch'
+          }}
         >
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial) => (
             <motion.article
               key={testimonial.id}
-              className="relative bg-[#ffffff0f] rounded-[30px] border border-solid border-[#ffffff30] backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)] p-6 lg:p-8 flex flex-col sm:flex-row gap-6"
-              variants={index % 2 === 0 ? slideInLeftVariants : slideInRightVariants}
+              className="relative bg-[#ffffff0f] rounded-[30px] border border-solid border-[#ffffff30] backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)] p-6 lg:p-8 flex flex-col gap-6 min-w-[85vw] sm:min-w-[400px] lg:min-w-[480px] snap-center flex-shrink-0"
+              variants={slideInVariants}
               transition={{ duration: 0.8, ease: "easeOut" }}
               whileHover={{ scale: 1.02, y: -5 }}
             >
-              <motion.img
-                className="w-full sm:w-32 lg:w-40 xl:w-48 h-48 sm:h-32 lg:h-40 xl:h-48 object-cover rounded-2xl flex-shrink-0"
-                alt={testimonial.imageAlt}
-                src={testimonial.image}
+              <motion.div
+                className="w-full h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden"
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-              />
+              >
+                <img
+                  className="w-full h-full object-cover object-[center_20%]"
+                  alt={testimonial.imageAlt}
+                  src={testimonial.image}
+                />
+              </motion.div>
 
-              <div className="flex flex-col gap-4 flex-1">
+              <div className="flex flex-col gap-4">
                 <div className="flex items-start justify-between">
                   <motion.p 
                     className="font-medium text-transparent text-lg lg:text-xl xl:text-2xl [font-family:'Plus_Jakarta_Sans',Helvetica]"
@@ -156,6 +161,14 @@ export const TestimonialsSection = (): JSX.Element => {
           ))}
         </motion.div>
       </div>
+
+      <style>
+        {`
+          .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+          }
+        `}
+      </style>
     </section>
   );
 };

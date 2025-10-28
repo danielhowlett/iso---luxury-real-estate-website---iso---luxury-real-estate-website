@@ -124,6 +124,9 @@ The Vite config has been customized for Replit:
 - Replaced all 4 testimonials with construction/roofing-specific reviews
 - Updated client names and locations to Tennessee area (Nashville, Springfield, Goodlettsville, White House)
 - Removed luxury real estate references and replaced with roofing, siding, framing, and renovation feedback
+- **Redesigned as horizontal scroll carousel** - smooth swipe/scroll experience for browsing testimonials
+- **Optimized image display** - photos now crop at 20% from top to prevent cutting off heads on mobile
+- **Swapped images** - corrected Jennifer Collins and Robert Martinez photos to match genders
 
 **Hero Section Improvements:**
 - Added caption "Five-Star Reviews" below the "25+" indicator for clarity
