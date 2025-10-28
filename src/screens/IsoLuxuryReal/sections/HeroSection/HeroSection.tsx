@@ -54,7 +54,7 @@ export const HeroSection = (): JSX.Element => {
 
       <div className="relative w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.header 
-          className="flex flex-col items-center justify-center pt-2 pb-6 lg:pt-4 lg:pb-10 gap-6"
+          className="flex flex-col items-center justify-center pt-2 pb-6 lg:pt-4 lg:pb-10"
           initial={shouldReduceMotion ? false : "hidden"}
           animate={shouldReduceMotion ? false : "visible"}
           variants={shouldReduceMotion ? {} : staggerContainer}
@@ -69,16 +69,6 @@ export const HeroSection = (): JSX.Element => {
               alt="HC Construction Logo"
               src="/hc-logo.png"
             />
-          </motion.div>
-
-          <motion.div 
-            className="inline-flex items-center justify-center gap-2.5 px-5 lg:px-6 py-2 rounded-full border border-solid border-[#ffffff4f]"
-            variants={shouldReduceMotion ? {} : fadeUpVariants}
-            transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          >
-            <span className="font-medium text-[#ffffffdb] text-xs lg:text-sm xl:text-base text-center tracking-[0.3em] lg:tracking-[0.46em] [font-family:'Plus_Jakarta_Sans',Helvetica] whitespace-nowrap">
-              ROOFING & CONSTRUCTION
-            </span>
           </motion.div>
         </motion.header>
 
@@ -96,6 +86,16 @@ export const HeroSection = (): JSX.Element => {
           >
             Serving the Nashville Area Since 2012
           </motion.h1>
+
+          <motion.div 
+            className="inline-flex items-center justify-center gap-2.5 px-5 lg:px-6 py-2 rounded-full border border-solid border-[#ffffff4f]"
+            variants={shouldReduceMotion ? {} : fadeUpVariants}
+            transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 0.9 }}
+          >
+            <span className="font-medium text-[#ffffffdb] text-xs lg:text-sm xl:text-base text-center tracking-[0.3em] lg:tracking-[0.46em] [font-family:'Plus_Jakarta_Sans',Helvetica] whitespace-nowrap">
+              ROOFING & CONSTRUCTION
+            </span>
+          </motion.div>
 
           <motion.p 
             className="w-full max-w-[90%] lg:max-w-[930px] font-medium text-[#ffffffcc] text-sm lg:text-base text-center leading-relaxed lg:leading-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica]"
