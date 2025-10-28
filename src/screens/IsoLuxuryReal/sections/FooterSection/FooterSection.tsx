@@ -29,7 +29,7 @@ export const FooterSection = (): JSX.Element => {
           <div className="sm:col-span-2 lg:col-span-1 flex flex-col gap-6">
             <div className="flex items-center gap-3">
               <img
-                className="h-12 w-auto brightness-110"
+                className="h-16 w-auto brightness-110"
                 alt="HC Construction Logo"
                 src="/hc-logo.png"
               />
