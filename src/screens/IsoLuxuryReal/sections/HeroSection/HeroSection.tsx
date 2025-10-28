@@ -11,8 +11,6 @@ const navigationItems = [
   { label: "Testimonials", sectionId: "testimonials", active: false },
 ];
 
-const avatarImages = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
-
 // Animation variants
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 60 },
@@ -85,7 +83,7 @@ export const HeroSection = (): JSX.Element => {
             transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut" }}
           >
             <img
-              className="h-12 lg:h-16 w-auto brightness-110"
+              className="h-16 lg:h-24 w-auto brightness-110"
               alt="HC Construction Logo"
               src="/hc-logo.png"
             />
@@ -166,7 +164,7 @@ export const HeroSection = (): JSX.Element => {
           </motion.p>
 
           <motion.div 
-            className="flex flex-col sm:flex-row items-center gap-6 lg:gap-8 mt-4 lg:mt-8"
+            className="flex flex-col items-center gap-4 mt-4 lg:mt-8"
             variants={shouldReduceMotion ? {} : fadeUpVariants}
             transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 1.2 }}
           >
@@ -189,35 +187,15 @@ export const HeroSection = (): JSX.Element => {
             </motion.button>
 
             <motion.div 
-              className="flex items-center gap-4"
+              className="flex flex-col items-center gap-1"
               variants={shouldReduceMotion ? {} : scaleInVariants}
               transition={shouldReduceMotion ? {} : { duration: 0.8, ease: "easeOut", delay: 1.4 }}
             >
-              <div className="flex" role="list" aria-label="Customer avatars">
-                {avatarImages.map((avatar, index) => (
-                  <motion.div
-                    key={avatar.id}
-                    className="w-12 h-12 lg:w-[54px] lg:h-[54px] bg-[#c4c4c4] rounded-full border-2 border-[#090909]"
-                    style={{ marginLeft: index > 0 ? "-12px" : "0" }}
-                    role="listitem"
-                    aria-label={`Customer ${index + 1}`}
-                    initial={shouldReduceMotion ? false : { scale: 0 }}
-                    animate={shouldReduceMotion ? false : { scale: 1 }}
-                    transition={shouldReduceMotion ? {} : { 
-                      duration: 0.5, 
-                      ease: "easeOut", 
-                      delay: 1.6 + (index * 0.1) 
-                    }}
-                  />
-                ))}
+              <div className="font-medium text-lg lg:text-xl text-white [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                25+
               </div>
-              <div className="flex flex-col gap-1">
-                <div className="font-medium text-lg lg:text-xl text-white [font-family:'Plus_Jakarta_Sans',Helvetica]">
-                  25+
-                </div>
-                <div className="font-medium text-xs lg:text-sm text-[#ffffffa1] [font-family:'Plus_Jakarta_Sans',Helvetica]">
-                  Five-Star Reviews
-                </div>
+              <div className="font-medium text-xs lg:text-sm text-[#ffffffa1] [font-family:'Plus_Jakarta_Sans',Helvetica]">
+                Five-Star Reviews
               </div>
             </motion.div>
           </motion.div>
