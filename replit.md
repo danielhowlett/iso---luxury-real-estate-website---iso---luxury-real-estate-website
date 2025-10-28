@@ -4,7 +4,7 @@
 This is a professional construction company website for HC Construction, a veteran-owned roofing and construction business serving the Nashville/Springfield, TN area since 2012. Built on the ISO Luxury Real Estate template, it's a React-based single-page application featuring modern design with sections for hero content, why choose us, services, recent work, contact, and footer.
 
 **Current State:** Fully rebranded for HC Construction with all content, images, and contact information updated
-**Last Updated:** October 27, 2025
+**Last Updated:** October 28, 2025
 
 ## Project Architecture
 
@@ -38,9 +38,10 @@ This is a professional construction company website for HC Construction, a veter
 │               ├── SubscriptionSection/
 │               └── FooterSection/
 ├── static/
-│   ├── hero-background.jpg      # Hero section background (roofing project)
-│   ├── about-section.jpg        # About section image (construction site)
-│   └── hc-logo.png             # HC Construction logo
+│   ├── hero-background.jpg        # Hero section background (roofing project)
+│   ├── about-section.jpg          # About section image (construction site aerial)
+│   ├── statistics-section.jpg     # Statistics section image (mansion construction)
+│   └── hc-logo.png               # HC Construction logo
 ├── index.html                    # HTML entry point
 ├── tailwind.config.js           # Tailwind configuration
 ├── tailwind.css                 # Tailwind styles
@@ -76,18 +77,23 @@ The Vite config has been customized for Replit:
 
 ## Recent Changes
 
-### October 28, 2025 - UI Refinements & Simplification
+### October 28, 2025 - UI Refinements, Badge Repositioning & Image Updates
 **Hero Section Updates:**
 - Removed avatar circles from "25+ Five-Star Reviews" indicator
 - Centered the "Get Your Free Quote" button for better visual hierarchy
 - "25+ Five-Star Reviews" text now displays cleanly below the button
+- **"ROOFING & CONSTRUCTION" badge repositioned** - now appears BELOW the main heading "Serving the Nashville Area Since 2012" instead of above the logo
+- Creates better visual flow: Logo → Heading → Badge → Subheading
 
 **Header Redesign:**
 - Removed navigation menu (Home, About, Features, Services, Testimonials)
 - Removed social media icons from header
 - Logo now centered at the top of the page
-- "ROOFING & CONSTRUCTION" badge moved below the logo for better visual flow
 - Creates a cleaner, more focused brand presentation
+
+**Image Updates:**
+- Updated "Why Choose HC Construction" section image to new construction site aerial photo
+- Updated "Built on Experience. Backed by Results." section image to mansion construction photo
 
 **Contact Section Simplification:**
 - Removed contact form box for streamlined presentation

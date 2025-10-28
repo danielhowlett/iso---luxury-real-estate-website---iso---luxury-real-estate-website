@@ -78,7 +78,7 @@ export const StatisticsSection = (): JSX.Element => {
           <img
             className="w-full max-w-[280px] h-auto rounded-[24px] object-cover"
             alt="HC Construction project"
-            src="/about-section.jpg"
+            src="/statistics-section.jpg"
           />
 
           {/* Description */}
@@ -150,7 +150,7 @@ export const StatisticsSection = (): JSX.Element => {
             <img
               className="w-[279px] h-[244px] rounded-[30px] object-cover"
               alt="HC Construction project"
-              src="/about-section.jpg"
+              src="/statistics-section.jpg"
             />
           </motion.div>
 
