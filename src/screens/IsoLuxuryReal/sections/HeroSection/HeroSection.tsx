@@ -52,9 +52,9 @@ export const HeroSection = (): JSX.Element => {
       {/* Dark overlay for better text contrast */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
 
-      <div className="relative w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-center">
         <motion.header 
-          className="flex flex-col items-center justify-center pt-2 pb-6 lg:pt-4 lg:pb-10"
+          className="flex flex-col items-center justify-center pt-8 pb-6 lg:pt-12 lg:pb-8"
           initial={shouldReduceMotion ? false : "hidden"}
           animate={shouldReduceMotion ? false : "visible"}
           variants={shouldReduceMotion ? {} : staggerContainer}
@@ -73,7 +73,7 @@ export const HeroSection = (): JSX.Element => {
         </motion.header>
 
         <motion.main 
-          className="flex flex-col items-center justify-center py-12 lg:py-20 xl:py-28 gap-8 lg:gap-12"
+          className="flex flex-col items-center justify-center pb-20 lg:pb-24 gap-8 lg:gap-12"
           initial={shouldReduceMotion ? false : "hidden"}
           animate={shouldReduceMotion ? false : "visible"}
           variants={shouldReduceMotion ? {} : staggerContainer}
