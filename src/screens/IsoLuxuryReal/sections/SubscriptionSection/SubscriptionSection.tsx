@@ -148,24 +148,17 @@ export const SubscriptionSection = (): JSX.Element => {
                     message: (e.currentTarget.elements.namedItem('message') as HTMLTextAreaElement).value
                   };
 
-                  try {
-                    await fetch('https://script.google.com/macros/s/AKfycbzb5MG6oauCGcfOqiONdOiUMshy4jMiUbgGew5ipcqLNsstiIKW_dPjK4MwDBk__WJM/exec', {
-                      method: 'POST',
-                      mode: 'no-cors',
-                      headers: { 'Content-Type': 'application/json' },
-                      body: JSON.stringify(formData)
-                    });
+                  await fetch('https://script.google.com/macros/s/AKfycbzb5MG6oauCGcfOqiONdOiUMshy4jMiUbgGew5ipcqLNsstiIKW_dPjK4MwDBk__WJM/exec', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                  });
 
-                    setSubmitStatus('success');
-                    e.currentTarget.reset();
-                    setTimeout(() => setSubmitStatus('idle'), 5000);
-                  } catch (error) {
-                    console.error('Form submission error:', error);
-                    setSubmitStatus('error');
-                    setTimeout(() => setSubmitStatus('idle'), 5000);
-                  } finally {
-                    setIsSubmitting(false);
-                  }
+                  setSubmitStatus('success');
+                  e.currentTarget.reset();
+                  setTimeout(() => setSubmitStatus('idle'), 5000);
+                  setIsSubmitting(false);
                 }}
               >
                 <h3 className="font-semibold text-white text-2xl [font-family:'Plus_Jakarta_Sans',Helvetica] mb-2">
