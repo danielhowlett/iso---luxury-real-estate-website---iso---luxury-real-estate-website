@@ -143,20 +143,11 @@ export const SubscriptionSection = (): JSX.Element => {
                   setSubmitStatus('idle');
                   
                   const formData = new FormData(e.currentTarget);
-                  const data = {
-                    name: formData.get('name'),
-                    email: formData.get('email'),
-                    message: formData.get('message')
-                  };
-
+                  
                   try {
                     await fetch('https://script.google.com/macros/s/AKfycbzb5MG6oauCGcfOqiONdOiUMshy4jMiUbgGew5ipcqLNsstiIKW_dPjK4MwDBk__WJM/exec', {
                       method: 'POST',
-                      mode: 'no-cors',
-                      headers: {
-                        'Content-Type': 'application/json',
-                      },
-                      body: JSON.stringify(data)
+                      body: formData
                     });
 
                     setSubmitStatus('success');
