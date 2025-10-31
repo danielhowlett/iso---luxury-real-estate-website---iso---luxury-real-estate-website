@@ -148,7 +148,7 @@ export const SubscriptionSection = (): JSX.Element => {
                     message: (e.currentTarget.elements.namedItem('message') as HTMLTextAreaElement).value
                   };
 
-                  await fetch('https://script.google.com/macros/s/AKfycbzb5MG6oauCGcfOqiONdOiUMshy4jMiUbgGew5ipcqLNsstiIKW_dPjK4MwDBk__WJM/exec', {
+                  await fetch('https://script.google.com/macros/s/AKfycbz5fW_qYP2j-5rrBHww5usF3wQCJLVpk2EzzJ4L76Se7flnYaaA0L7UTf269bMn3pnO/exec', {
                     method: 'POST',
                     mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
