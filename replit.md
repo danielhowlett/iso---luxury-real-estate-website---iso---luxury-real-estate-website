@@ -24,7 +24,7 @@ The project is a React 18.2.0 single-page application built with Vite 6.0.4 and 
 **Technical Implementations & Feature Specifications:**
 - **Core Sections:** Hero, Why Choose Us (AboutUsSection), Services (LodgingSection), Statistics (StatisticsSection), Testimonials, Recent Work (VideoSection), Contact (SubscriptionSection), and Footer.
 - **Services:** Features distinct cards for Roofing, Siding, Framing, and Renovation, each with a call to action.
-- **Contact Form:** Integrated contact form that utilizes a `mailto:` protocol to open the user's email client with pre-filled subject and message upon submission.
+- **Contact Form:** Integrated contact form that submits to Google Apps Script endpoint, capturing visitor information and sending it to a Google Sheet for lead management.
 - **Statistics:** Displays key company metrics like years in service, projects completed, and special offers for military/police/firefighters.
 - **Image Management:** All static assets, including images, are stored in the `/static` folder.
 
@@ -43,6 +43,15 @@ The project is a React 18.2.0 single-page application built with Vite 6.0.4 and 
 - **Development Tooling:** TypeScript
 
 ## Recent Changes
+
+### October 31, 2025 - Google Apps Script Integration
+**Contact form now submits to Google Apps Script:**
+- Form submits data to Google Apps Script endpoint for storage in Google Sheets
+- Added loading state with spinner animation while submitting
+- Success message displays after form submission with auto-clear after 5 seconds
+- Error handling with user-friendly error messages
+- Form clears automatically on successful submission
+- Button disabled during submission to prevent duplicate entries
 
 ### October 28, 2025 - Testimonials Photos Removed
 **Simplified testimonials section:**
