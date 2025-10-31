@@ -5,8 +5,6 @@ interface Testimonial {
   name: string;
   location: string;
   quote: string;
-  image: string;
-  imageAlt: string;
 }
 
 // Animation variants
@@ -44,8 +42,6 @@ export const TestimonialsSection = (): JSX.Element => {
       location: "Nashville, TN",
       quote:
         "HC Construction replaced our entire roof last summer. Their crew was professional, efficient, and left the property spotless. The quality of work exceeded our expectations, and we've had zero issues since.",
-      image: "https://c.animaapp.com/3DzYceDx/img/image-1@2x.png",
-      imageAlt: "Michael Thompson testimonial",
     },
     {
       id: 2,
@@ -53,8 +49,6 @@ export const TestimonialsSection = (): JSX.Element => {
       location: "Springfield, TN",
       quote:
         "From the initial estimate to final cleanup, HC Construction was outstanding. They helped us navigate insurance claims and delivered a beautiful new siding installation. Highly recommend for any exterior project.",
-      image: "https://c.animaapp.com/3DzYceDx/img/image-3@2x.png",
-      imageAlt: "Jennifer Collins testimonial",
     },
     {
       id: 3,
@@ -62,8 +56,6 @@ export const TestimonialsSection = (): JSX.Element => {
       location: "Goodlettsville, TN",
       quote:
         "As a veteran myself, I appreciated working with a veteran-owned business. They framed our garage addition with precision and professionalism. The attention to detail was impressive throughout the entire project.",
-      image: "https://c.animaapp.com/3DzYceDx/img/image-2@2x.png",
-      imageAlt: "Robert Martinez testimonial",
     },
     {
       id: 4,
@@ -71,8 +63,6 @@ export const TestimonialsSection = (): JSX.Element => {
       location: "White House, TN",
       quote:
         "Our home renovation was a big undertaking, but HC Construction made it stress-free. They communicated clearly, stayed on schedule, and transformed our space beyond what we imagined. Worth every penny!",
-      image: "https://c.animaapp.com/3DzYceDx/img/image-4@2x.png",
-      imageAlt: "Sarah Williams testimonial",
     },
   ];
 
@@ -100,58 +90,46 @@ export const TestimonialsSection = (): JSX.Element => {
           {testimonials.map((testimonial, index) => (
             <motion.article
               key={testimonial.id}
-              className="relative bg-[#ffffff0f] rounded-[30px] border border-solid border-[#ffffff30] backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)] p-6 lg:p-8 flex flex-col sm:flex-row gap-6"
+              className="relative bg-[#ffffff0f] rounded-[30px] border border-solid border-[#ffffff30] backdrop-blur-2xl backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(40px)_brightness(100%)] p-6 lg:p-8 flex flex-col gap-4"
               variants={index % 2 === 0 ? slideInLeftVariants : slideInRightVariants}
               transition={{ duration: 0.8, ease: "easeOut" }}
               whileHover={{ scale: 1.02, y: -5 }}
             >
-              <motion.img
-                className="w-full sm:w-32 lg:w-40 xl:w-48 h-48 sm:h-32 lg:h-40 xl:h-48 object-cover object-top rounded-2xl flex-shrink-0"
-                alt={testimonial.imageAlt}
-                src={testimonial.image}
-                initial={{ scale: 0.8, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-              />
-
-              <div className="flex flex-col gap-4 flex-1">
-                <div className="flex items-start justify-between">
-                  <motion.p 
-                    className="font-medium text-transparent text-lg lg:text-xl xl:text-2xl [font-family:'Plus_Jakarta_Sans',Helvetica]"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-                  >
-                    <span className="text-white">{testimonial.name}</span>
-                    <span className="text-[#ffffffa1] text-sm lg:text-base">
-                      {" "}
-                      / {testimonial.location}
-                    </span>
-                  </motion.p>
-                  <motion.div
-                    className="font-medium text-white text-5xl lg:text-6xl xl:text-7xl [font-family:'Plus_Jakarta_Sans',Helvetica] leading-none"
-                    aria-hidden="true"
-                    initial={{ scale: 0, rotate: -180 }}
-                    whileInView={{ scale: 1, rotate: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-                  >
-                    &quot;
-                  </motion.div>
-                </div>
-
-                <motion.blockquote 
-                  className="font-medium text-[#ffffffa1] text-sm lg:text-base leading-relaxed lg:leading-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica]"
+              <div className="flex items-start justify-between">
+                <motion.p 
+                  className="font-medium text-transparent text-lg lg:text-xl xl:text-2xl [font-family:'Plus_Jakarta_Sans',Helvetica]"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                 >
-                  {testimonial.quote}
-                </motion.blockquote>
+                  <span className="text-white">{testimonial.name}</span>
+                  <span className="text-[#ffffffa1] text-sm lg:text-base">
+                    {" "}
+                    / {testimonial.location}
+                  </span>
+                </motion.p>
+                <motion.div
+                  className="font-medium text-white text-5xl lg:text-6xl xl:text-7xl [font-family:'Plus_Jakarta_Sans',Helvetica] leading-none"
+                  aria-hidden="true"
+                  initial={{ scale: 0, rotate: -180 }}
+                  whileInView={{ scale: 1, rotate: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+                >
+                  &quot;
+                </motion.div>
               </div>
+
+              <motion.blockquote 
+                className="font-medium text-[#ffffffa1] text-sm lg:text-base leading-relaxed lg:leading-[30px] [font-family:'Plus_Jakarta_Sans',Helvetica]"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+              >
+                {testimonial.quote}
+              </motion.blockquote>
             </motion.article>
           ))}
         </motion.div>

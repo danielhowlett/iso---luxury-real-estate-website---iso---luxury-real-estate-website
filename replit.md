@@ -41,3 +41,30 @@ The project is a React 18.2.0 single-page application built with Vite 6.0.4 and 
 - **Styling Utilities:** clsx, tailwind-merge, tailwindcss-animate
 - **Build Tool:** Vite
 - **Development Tooling:** TypeScript
+
+## Recent Changes
+
+### October 28, 2025 - Testimonials Photos Removed
+**Simplified testimonials section:**
+- Removed client photos from testimonial cards
+- Changed from side-by-side layout (photo + text) to clean text-only cards
+- Kept name, location, quote, and decorative quotation mark
+- Cards now display in cleaner, more streamlined format
+
+### October 28, 2025 - Contact Form Restoration
+**Re-added contact form box:**
+- Restored two-column layout in contact section
+- Left column: Contact information card with address, phone, email, hours
+- Right column: Contact form with name, email, message fields and "Get a Free Quote" submit button
+- Form opens email client with pre-filled subject and message when submitted
+- Both cards have matching glass-morphism design with proper spacing
+
+### October 28, 2025 - Complete Anima Branding Removal
+**Removed all Anima references and scripts:**
+- Updated HTML title from "Anima Project" to "HC Construction - Nashville & Springfield Roofing Experts"
+- Updated package.json name from "anima-project" to "hc-construction-website"
+- Removed @animaapp/vite-plugin-screen-graph package and all references
+- Updated vite.config.ts to remove Anima screen graph plugin
+- Replaced Anima CDN button icon with inline SVG chevron icon
+- Completely rewrote README.md with HC Construction branding
+- Deleted .screen-graph.json file
