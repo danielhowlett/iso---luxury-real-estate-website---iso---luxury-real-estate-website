@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 // Animation variants
 const fadeUpVariants = {
@@ -24,8 +23,6 @@ const staggerContainer = {
 };
 
 export const SubscriptionSection = (): JSX.Element => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   return (
     <section id="contact" className="relative w-full py-20 md:py-24 bg-black px-6 sm:px-8 md:px-12 lg:px-20">
       <div className="w-full max-w-[1200px] mx-auto">
@@ -136,30 +133,10 @@ export const SubscriptionSection = (): JSX.Element => {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
               <form 
+                action="https://script.google.com/macros/s/AKfycbyNMg-VTxQbDeKZUDzkq0rMwzUyNw1IOqMLdtSlpqvdqcuw3fWcp5sIvVbRjuuQkhsw/exec"
+                method="POST"
+                id="contact-form"
                 className="bg-[#ffffff0f] rounded-[20px] border border-solid border-[#ffffff30] backdrop-blur-2xl p-8 flex flex-col gap-6 h-full"
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  setIsSubmitting(true);
-                  setSubmitStatus('idle');
-                  
-                  const formData = {
-                    name: (e.currentTarget.elements.namedItem('name') as HTMLInputElement).value,
-                    email: (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value,
-                    message: (e.currentTarget.elements.namedItem('message') as HTMLTextAreaElement).value
-                  };
-
-                  await fetch('https://script.google.com/macros/s/AKfycbyNMg-VTxQbDeKZUDzkq0rMwzUyNw1IOqMLdtSlpqvdqcuw3fWcp5sIvVbRjuuQkhsw/exec', {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                  });
-
-                  setSubmitStatus('success');
-                  e.currentTarget.reset();
-                  setTimeout(() => setSubmitStatus('idle'), 5000);
-                  setIsSubmitting(false);
-                }}
               >
                 <h3 className="font-semibold text-white text-2xl [font-family:'Plus_Jakarta_Sans',Helvetica] mb-2">
                   Send Us a Message
@@ -210,44 +187,23 @@ export const SubscriptionSection = (): JSX.Element => {
                   />
                 </div>
 
-                {/* Status Messages */}
-                {submitStatus === 'success' && (
-                  <div className="bg-green-500/20 border border-green-500/50 rounded-lg px-4 py-3 text-green-200 text-sm [font-family:'Plus_Jakarta_Sans',Helvetica]">
-                    Thank you! Your message has been sent successfully. We'll get back to you soon.
-                  </div>
-                )}
-                {submitStatus === 'error' && (
-                  <div className="bg-red-500/20 border border-red-500/50 rounded-lg px-4 py-3 text-red-200 text-sm [font-family:'Plus_Jakarta_Sans',Helvetica]">
-                    Sorry, there was an error sending your message. Please try again or call us directly.
-                  </div>
-                )}
-
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="bg-[#ffffff29] border-[#ffffff30] inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-lg border border-solid backdrop-blur-2xl cursor-pointer hover:bg-[#ffffff39] transition-all mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  id="submit-btn"
+                  className="bg-white hover:bg-[#ffffffee] text-black font-semibold text-base [font-family:'Plus_Jakarta_Sans',Helvetica] py-4 px-8 rounded-full transition-all duration-300"
                 >
-                  <span className="text-white text-center font-medium text-base [font-family:'Plus_Jakarta_Sans',Helvetica]">
-                    {isSubmitting ? 'Sending...' : 'Get a Free Quote'}
-                  </span>
-                  {!isSubmitting && (
-                    <svg 
-                      className="w-5 h-5" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  )}
-                  {isSubmitting && (
-                    <svg className="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                  )}
+                  Get a Free Quote
                 </button>
+                
+                {/* Success Message */}
+                <p 
+                  id="form-response" 
+                  style={{ display: 'none' }} 
+                  className="text-green-400 text-sm [font-family:'Plus_Jakarta_Sans',Helvetica] text-center"
+                >
+                  Thank you! Your message has been sent successfully.
+                </p>
               </form>
             </motion.div>
           </div>
