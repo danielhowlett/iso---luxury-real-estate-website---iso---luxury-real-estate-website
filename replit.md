@@ -44,12 +44,13 @@ The project is a React 18.2.0 single-page application built with Vite 6.0.4 and 
 
 ## Recent Changes
 
-### October 31, 2025 - Google Apps Script Integration
+### October 31, 2025 - Google Apps Script Integration (Updated)
 **Contact form now submits to Google Apps Script:**
-- Form submits data to Google Apps Script endpoint for storage in Google Sheets
+- Form submits data to Google Apps Script endpoint: https://script.google.com/macros/s/AKfycbxNTf2NIJkHkCz0bl0jI4Kf7y8AnqxHFzsL4lcVbPmtVOdhycCr9YY_2QJu7x5xb2SB/exec
+- Uses FormData for submission (method="POST", action attribute on form)
+- Field names: `name`, `email`, `message`
 - Added loading state with spinner animation while submitting
 - Success message displays after form submission with auto-clear after 5 seconds
-- Error handling with user-friendly error messages
 - Form clears automatically on successful submission
 - Button disabled during submission to prevent duplicate entries
 

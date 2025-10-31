@@ -136,27 +136,24 @@ export const SubscriptionSection = (): JSX.Element => {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
               <form 
+                method="POST"
+                action="https://script.google.com/macros/s/AKfycbxNTf2NIJkHkCz0bl0jI4Kf7y8AnqxHFzsL4lcVbPmtVOdhycCr9YY_2QJu7x5xb2SB/exec"
                 className="bg-[#ffffff0f] rounded-[20px] border border-solid border-[#ffffff30] backdrop-blur-2xl p-8 flex flex-col gap-6 h-full"
                 onSubmit={async (e) => {
                   e.preventDefault();
                   setIsSubmitting(true);
                   setSubmitStatus('idle');
                   
-                  const formData = {
-                    name: (e.currentTarget.elements.namedItem('name') as HTMLInputElement).value,
-                    email: (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value,
-                    message: (e.currentTarget.elements.namedItem('message') as HTMLTextAreaElement).value
-                  };
+                  const form = e.currentTarget;
+                  const formData = new FormData(form);
 
-                  await fetch('https://script.google.com/macros/s/AKfycbyNMg-VTxQbDeKZUDzkq0rMwzUyNw1IOqMLdtSlpqvdqcuw3fWcp5sIvVbRjuuQkhsw/exec', {
+                  await fetch(form.action, {
                     method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
+                    body: formData
                   });
 
                   setSubmitStatus('success');
-                  e.currentTarget.reset();
+                  form.reset();
                   setTimeout(() => setSubmitStatus('idle'), 5000);
                   setIsSubmitting(false);
                 }}
