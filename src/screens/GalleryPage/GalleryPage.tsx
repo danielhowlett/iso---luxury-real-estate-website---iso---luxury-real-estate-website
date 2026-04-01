@@ -4,15 +4,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FooterSection } from "../IsoLuxuryReal/sections/FooterSection";
 
 // ─── ADD YOUR GALLERY IMAGES HERE ───────────────────────────────────────────
-// Drop images into the /static folder and add their paths below.
-// Format: { src: "/your-image.jpg", alt: "Description of the image" }
+// Drop images into the /static/gallery/ folder and add their paths below.
+// Format: { src: "/gallery/your-image.jpg", alt: "Description of the image" }
 const galleryImages = [
-  { src: "/hero-background.jpg", alt: "Roofing project - Nashville area" },
-  { src: "/statistics-section.jpg", alt: "Completed construction project" },
-  { src: "/about-section.jpg", alt: "HC Construction craftsmanship" },
-  { src: "/hero-background.jpg", alt: "Residential roofing - Springfield TN" },
-  { src: "/statistics-section.jpg", alt: "Quality siding installation" },
-  { src: "/about-section.jpg", alt: "Home renovation project" },
+  { src: "/gallery/IMG_0816.jpg", alt: "HC Construction project" },
+  { src: "/gallery/IMG_0817.jpg", alt: "HC Construction project" },
+  { src: "/gallery/IMG_0819.jpg", alt: "HC Construction project" },
+  { src: "/gallery/IMG_0820.jpg", alt: "HC Construction project" },
+  { src: "/gallery/IMG_0821.jpg", alt: "HC Construction project" },
+  { src: "/gallery/IMG_0822.jpg", alt: "HC Construction project" },
+  { src: "/gallery/IMG_0824.jpg", alt: "HC Construction project" },
+  { src: "/gallery/15cdcb9f-52f7-4a2f-94d0-5fe88b5a2ce5.jpg", alt: "HC Construction project" },
+  { src: "/gallery/86d0ad56-d37f-482c-83a3-3f08f64ea476.jpg", alt: "HC Construction project" },
+  { src: "/gallery/75727360208__E8D8B9E4-88F1-4EEB-A3B5-41947E342930.jpg", alt: "HC Construction project" },
+  { src: "/gallery/a32b8016-ab2c-41c4-9318-b27c482af8e3.jpg", alt: "HC Construction project" },
 ];
 // ─────────────────────────────────────────────────────────────────────────────
 

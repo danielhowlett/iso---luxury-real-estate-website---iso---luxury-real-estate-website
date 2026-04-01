@@ -18,9 +18,9 @@ const staggerContainer = {
 };
 
 const previewImages = [
-  { src: "/hero-background.jpg", alt: "HC Construction roofing project" },
-  { src: "/statistics-section.jpg", alt: "HC Construction completed project" },
-  { src: "/about-section.jpg", alt: "HC Construction craftsmanship" },
+  { src: "/gallery/IMG_0816.jpg", alt: "HC Construction project" },
+  { src: "/gallery/IMG_0819.jpg", alt: "HC Construction project" },
+  { src: "/gallery/IMG_0822.jpg", alt: "HC Construction project" },
 ];
 
 export const GalleryPreviewSection = (): JSX.Element => {
