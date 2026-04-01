@@ -137,7 +137,7 @@ export const SubscriptionSection = (): JSX.Element => {
             >
               <form 
                 method="POST"
-                action="https://script.google.com/macros/s/AKfycbxNTf2NIJkHkCz0bl0jI4Kf7y8AnqxHFzsL4lcVbPmtVOdhycCr9YY_2QJu7x5xb2SB/exec"
+                action="https://script.google.com/macros/s/AKfycbydZKP4QW4H_1dcjMpyNiGFpfEFI2DRfdPXHgf4tnGTf865jHUTCviyg8bvcQJZjU9j/exec"
                 className="bg-[#ffffff0f] rounded-[20px] border border-solid border-[#ffffff30] backdrop-blur-2xl p-8 flex flex-col gap-6 h-full"
                 onSubmit={async (e) => {
                   e.preventDefault();
