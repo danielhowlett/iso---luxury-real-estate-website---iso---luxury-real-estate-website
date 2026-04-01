@@ -20,7 +20,7 @@ const staggerContainer = {
 const previewImages = [
   { src: "/gallery/IMG_0816.jpg", alt: "HC Construction project" },
   { src: "/gallery/IMG_0827_preview.jpg", alt: "HC Construction project" },
-  { src: "/gallery/IMG_0822.jpg", alt: "HC Construction project" },
+  { src: "/gallery/IMG_0855_preview.jpg", alt: "HC Construction project" },
 ];
 
 export const GalleryPreviewSection = (): JSX.Element => {
