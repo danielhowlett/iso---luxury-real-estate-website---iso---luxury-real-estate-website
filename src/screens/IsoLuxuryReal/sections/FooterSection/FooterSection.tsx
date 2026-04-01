@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom";
 import { smoothScrollTo } from "../../../../utils/smoothScroll";
 
 interface FooterLink {
   text: string;
   sectionId?: string;
+  href?: string;
 }
 
 const companyLinks: FooterLink[] = [
   { text: "Home", sectionId: "hero" },
   { text: "About Us", sectionId: "about" },
   { text: "Services", sectionId: "features" },
+  { text: "Gallery", href: "/gallery" },
   { text: "Contact", sectionId: "contact" },
 ];
 
@@ -57,12 +60,21 @@ export const FooterSection = (): JSX.Element => {
             <ul className="flex flex-col gap-3">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <button
-                    onClick={() => link.sectionId && smoothScrollTo(link.sectionId)}
-                    className="font-medium text-[#ffffffcc] text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] hover:text-white transition-colors cursor-pointer text-left"
-                  >
-                    {link.text}
-                  </button>
+                  {link.href ? (
+                    <Link
+                      to={link.href}
+                      className="font-medium text-[#ffffffcc] text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] hover:text-white transition-colors"
+                    >
+                      {link.text}
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => link.sectionId && smoothScrollTo(link.sectionId)}
+                      className="font-medium text-[#ffffffcc] text-sm lg:text-base [font-family:'Plus_Jakarta_Sans',Helvetica] hover:text-white transition-colors cursor-pointer text-left"
+                    >
+                      {link.text}
+                    </button>
+                  )}
                 </li>
               ))}
             </ul>

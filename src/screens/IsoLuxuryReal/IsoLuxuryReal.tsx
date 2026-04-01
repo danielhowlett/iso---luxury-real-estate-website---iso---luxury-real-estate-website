@@ -1,5 +1,6 @@
 import { AboutUsSection } from "./sections/AboutUsSection";
 import { FooterSection } from "./sections/FooterSection";
+import { GalleryPreviewSection } from "./sections/GalleryPreviewSection/GalleryPreviewSection";
 import { HeroSection } from "./sections/HeroSection";
 import { LodgingSection } from "./sections/LodgingSection";
 import { StatisticsSection } from "./sections/StatisticsSection";
@@ -17,6 +18,7 @@ export const IsoLuxuryReal = (): JSX.Element => {
       <AboutUsSection />
       <TestimonialsSection />
       <StatisticsSection />
+      <GalleryPreviewSection />
       <SubscriptionSection />
       <FooterSection />
     </main>
