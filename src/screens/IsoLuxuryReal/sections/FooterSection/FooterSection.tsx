@@ -127,10 +127,10 @@ export const FooterSection = (): JSX.Element => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <a
-                  href="mailto:reylopez21@icloud.com"
+                  href="mailto:reyhcconstruction80@gmail.com"
                   className="font-medium text-[#ffffffcc] text-sm [font-family:'Plus_Jakarta_Sans',Helvetica] hover:text-white transition-colors break-all"
                 >
-                  reylopez21@icloud.com
+                  reyhcconstruction80@gmail.com
                 </a>
               </div>
             </div>

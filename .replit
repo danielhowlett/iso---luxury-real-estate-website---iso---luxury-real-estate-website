@@ -33,30 +33,6 @@ waitForPort = 5000
 localPort = 5000
 externalPort = 80
 
-[[ports]]
-localPort = 33909
-externalPort = 3000
-
-[[ports]]
-localPort = 36083
-externalPort = 3002
-
-[[ports]]
-localPort = 39885
-externalPort = 3003
-
-[[ports]]
-localPort = 42931
-externalPort = 5000
-
-[[ports]]
-localPort = 44747
-externalPort = 3001
-
-[[ports]]
-localPort = 44919
-externalPort = 4200
-
 [deployment]
 deploymentTarget = "autoscale"
 run = ["npx", "vite", "preview", "--host", "0.0.0.0", "--port", "5000"]

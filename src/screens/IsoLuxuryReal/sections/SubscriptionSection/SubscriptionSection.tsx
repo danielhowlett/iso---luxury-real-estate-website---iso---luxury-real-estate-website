@@ -104,8 +104,8 @@ export const SubscriptionSection = (): JSX.Element => {
                     <p className="font-semibold text-white text-base [font-family:'Plus_Jakarta_Sans',Helvetica] mb-1">
                       Email
                     </p>
-                    <a href="mailto:reylopez21@icloud.com" className="font-medium text-[#ffffffcc] text-sm [font-family:'Plus_Jakarta_Sans',Helvetica] hover:text-white transition-colors">
-                      reylopez21@icloud.com
+                    <a href="mailto:reyhcconstruction80@gmail.com" className="font-medium text-[#ffffffcc] text-sm [font-family:'Plus_Jakarta_Sans',Helvetica] hover:text-white transition-colors">
+                      reyhcconstruction80@gmail.com
                     </a>
                   </div>
                 </div>
