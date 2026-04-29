@@ -74,6 +74,8 @@ const galleryImages = [
   { src: "/gallery/IMG_8852.jpg", alt: "HC Construction project" },
   { src: "/gallery/IMG_8853.jpg", alt: "HC Construction project" },
   { src: "/gallery/IMG_8855.jpg", alt: "HC Construction project" },
+  { src: "/gallery/dji_fly_20240328_110530_898_1711642425590_photo-scaled-1_1761583896729.jpg", alt: "HC Construction roofing project - aerial view" },
+  { src: "/gallery/dji_fly_20240328_110530_898_1711642425590_photo-scaled-1_1761688623921.jpg", alt: "HC Construction roofing project - aerial view" },
   { src: "/gallery/dji_fly_20260420_112910_698_1776704101529_photo_1777501265349.jpg", alt: "HC Construction roofing project - aerial view" },
   { src: "/gallery/dji_fly_20260420_112916_699_1776704107037_photo_1777501265353.jpg", alt: "HC Construction roofing project - aerial view" },
   { src: "/gallery/dji_fly_20260420_112928_700_1776704095213_photo_1777501265354.jpg", alt: "HC Construction roofing project - aerial view" },
