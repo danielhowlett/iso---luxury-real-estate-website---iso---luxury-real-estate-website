@@ -71,7 +71,7 @@ export const SubscriptionSection = (): JSX.Element => {
                       Residential Location
                     </p>
                     <p className="font-medium text-[#ffffffcc] text-sm [font-family:'Plus_Jakarta_Sans',Helvetica]">
-                      245 Elder Drive<br />Springfield, TN 37172
+                      165 Chippendale Dr<br />Hendersonville, TN 37075<br />United States
                     </p>
                   </div>
                 </div>

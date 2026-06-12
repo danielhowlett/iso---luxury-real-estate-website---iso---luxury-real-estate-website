@@ -116,7 +116,7 @@ export const FooterSection = (): JSX.Element => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <p className="font-medium text-[#ffffffcc] text-sm [font-family:'Plus_Jakarta_Sans',Helvetica]">
-                  245 Elder Drive<br />Springfield, TN 37172
+                  165 Chippendale Dr<br />Hendersonville, TN 37075<br />United States
                 </p>
               </div>
 
